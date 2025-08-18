@@ -2302,11 +2302,11 @@ color: black;
      .drop-down {
         display: none ;
      }
-     .search-input{
+     /* .search-input{
         width: 5%;
         /* background-color: red; */
-        height: 30px;
-     }
+        /* height: 30px; */
+     /* } */ */
      .back-slash{
         display: none;
      }
@@ -2800,6 +2800,15 @@ color: black;
 .zcfwGrid{
     
 }
+/* *{
+    overflow-x: hidden;
+} */
+.theme-toggle{
+    /* background-color: red; */
+    margin: 0;
+    /* z-index: 100; */
+   
+}
 .rolllWrapRight iframe{
     width: 300px;
     height: 300px;
@@ -2938,7 +2947,7 @@ body.light-theme .Generative-AI{
         display: none;
     }
     .search-input{
-        margin-left: 320px;
+        /* margin-left: 320px; */
     }
     .if-studio-wrap{
         width: 95%;
