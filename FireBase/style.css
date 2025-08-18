@@ -1,0 +1,1871 @@
+*{
+    padding: 0;
+    margin: 0;
+      box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden; /* hides horizontal scrollbar */
+
+    font-family: 'Inter', sans-serif;
+}
+.first-greyWrap{
+    margin-top: 220px;
+}
+.sect{
+    width: 100%;
+}
+.first-greyWrap{
+    width: 100%;
+    height: 1250px;
+    background-color: #1b1b1b ;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+
+}.topLeft-div{
+    width: 22%;
+    height: 500px;
+    /* background-color: grey; */
+    /* border: solid 1px grey; */
+    
+    position: relative;
+    top: 72px;
+    left: 220px;
+    
+
+}.build-bg{
+    width: 130px;
+    height: 45px;
+    background-color: grey;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 2%;
+    top: 5%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}.build-bg h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;    
+}.topLeft-div p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 320%;
+    color: white;
+    position: relative;
+    top: 8%;
+    left: 2%;
+
+}#globally{
+    color:  orange;
+}
+.topRight-div{
+    width: 52%;
+    height: 300px;
+    /* background-color: grey; */
+    /* border: solid 1px grey; */
+    
+    position: relative;
+    top: -380px;
+    left: 593px;
+    
+}.topRight-div p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 38px;
+    font-weight: 10;
+    position: relative;
+    top: 25%;
+    right: 1.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.build-products-wrap{ /*The white bg behind "Build products" text...*/
+    width: 12%;
+    height: 45px;
+    background-color: rgb(211, 211, 211);
+    border: none;
+    border-radius: 30px;
+    position: relative; 
+    left: 54.6%;
+    top: -1040px;
+    
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; Optional: smooth transition on hover
+
+}.build-products-wrap p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: 200;
+
+}.build-products-content-wrap{
+    width: 52%;
+    height: 700px;
+    background-color: #2f2f2f;
+    position: relative;
+    bottom: 320px;
+    left: 35%;
+    border-radius: 7%;
+    
+
+    display: flex;
+    /* align-items: center; */
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.4); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+      /* 1st Set (left) */
+}.left-wrap{
+    width: 20vw;
+    height: 85%;
+    /* border: 2px solid orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: %; */
+    flex-direction: column;
+    
+    position: relative;
+    /* left: 12.2%; */
+    top: 5%;
+    
+/* }.left-wrap img{
+    width: 10%;
+    height: 20%; */
+    /* individual design for all <p> tags under left-wrap */
+}.left-wrap #p1{
+    position: relative;
+    left: 5%;
+}.left-wrap #p2{
+    position: relative;
+    left: 9%;
+}.left-wrap #p3{
+    position: relative;
+    left: 13%;
+}.left-wrap #p4{
+    position: relative;
+    left: 8%;
+}.left-wrap #p5{
+    position: relative;
+    left: 7%;
+    /* Colletive design for all <p> tags under left-wrap */
+}.left-wrap p{
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}.left-wrap #prod{
+    text-align: center;
+}
+#ps{
+    width: 50%;
+    /* background-color: brown; */
+}
+
+#prod{
+    width: 70%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+}#prod #pointer{
+    width: 25%;
+    filter: invert();
+}#arrows{
+    width: 20%;
+    /* background-color: brown; */
+    margin-right: -40%;
+}
+
+
+
+    /* 2nd set (Right)  */
+.right-wrap{
+    width: 25vw; /*VEIW WIDTH (COS I AIN'T SURE OF THE EACT WIDTH)*/
+    height: 71%;
+    /* border: 2px solid orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /* gap: %; */
+    flex-direction: column;
+    
+    position: relative;
+    left: 10.2%;
+    top: 5%;
+    
+}.right-wrap #p8{
+    position: relative;
+    top: -40%;
+    right: 5px;
+}.right-wrap #p9{
+    position: relative;
+    top: -90%;
+    right: 13px;
+}.right-wrap #p10{
+    position: relative;
+    top: -150%;
+    left: -4%;
+}.right-wrap #p11{
+    position: relative;
+    left: 14%;
+    top: -190%;
+}.right-wrap #p12{
+    position: relative;
+    left: 23%;
+    top: -260%;
+}
+.right-wrap p{
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100; 
+}
+
+.right-wrap #prod1{
+     width: 70%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: center; */
+    gap: 10%;
+}#prod1 #pointer1{
+    width: 60%;
+    filter: invert();
+}
+#arrows1{
+    width:  10%;
+    /* background-color: brown; */
+    margin-left: 10%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ps1{
+    width: 100%;
+    /* background-color: brown; */
+    margin-left: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+    /* The Faetures Page */
+
+.features-container{
+    width: 100%;
+    /* height: ; */
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+}.features-container img{
+    width: 20% ;
+}
+.features{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 70px;
+    
+}#text{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#firbaseAI{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#firbaseAI img{
+
+}
+#firbaseAI h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+    top: 10%;
+}#firbaseAI p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    /* top: 2%; */
+    margin-top: 20px;
+
+}#firbaseAI button{
+    position: relative;
+    left: 5%;
+    top: 15%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px #ffa500;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;   
+}#firbaseAI button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+    /* The New Alert on each section */
+#new-alertBg{
+    width: 80px;
+    height: 45px;
+    background-color: rgb(12, 123, 249);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 70%;
+    top: -93%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}#new-alertBg p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px; 
+    color: #fff;
+    position: relative;
+    top: 1.5%;
+    left: -1%;
+}
+ 
+
+#genKit{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+    
+
+
+
+}#genKit img{
+
+}
+#genKit h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+    top: 10%;
+}#genKit p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: 2%;
+    margin-top: 20px;
+}#genKit button{
+    position: relative;
+    left: 5%;
+    top: 15%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#genKit button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+    /* The New Alert on each section */
+    #new-alertBg{
+        width: 80px;
+        height: 45px;
+        background-color: rgb(12, 123, 249);
+        border: none;
+        border-radius: 30px;
+        position: relative;
+        left: 70%;
+        top: -93%;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    #new-alertBg p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.ML{
+    width: 23.2%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+    position: relative;
+    right: -37.5%;
+    top: 120px;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#machineLearning img{
+   width: 20px;
+   height: 30rem;
+}
+#machineLearning h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 6%;
+    bottom: 40px;
+}#machineLearning p{
+    color:  #797979;
+    position: relative;
+    left: 6%;
+    top: 30%;
+
+}#machineLearning button{
+    position: relative;
+    left: 6%;
+    top: 60px;
+
+    width: 40%;
+    height: 35px;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    
+} #machineLearning button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+} 
+
+
+
+
+
+    /* Features 1.0 page */
+
+.features-container-1{
+    width: 100%;
+    /* height: ; */
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+
+    position: relative;
+    top: 159px;
+}
+
+.features-1{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 90px;
+    
+}#text1{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text1 h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text1 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#dataConnect{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#dataConnect img{
+
+}
+#dataConnect h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+    top: 10%;
+}#dataConnect p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    top: 10%;
+
+}#dataConnect button{
+    position: relative;
+    left: 5%;
+    top: 16%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#dataConnect button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+/* The New Alert on each section */
+#new-alertBgDC{
+    width: 80px;
+    height: 45px;
+    background-color: rgb(12, 123, 249);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 70%;
+    bottom: 295px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}#new-alertBgDC p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    padding: 0; 
+}
+
+#cloudFirestore{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#cloudFirestore img{
+
+}
+#cloudFirestore h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#cloudFirestore p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#cloudFirestore button{
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}#cloudFirestore button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+.RD{
+    width: 23.2%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+    position: relative;
+    right: -37.5%;
+    top: 120px;
+    cursor: pointer;
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#realTimeDatabase img{
+
+}
+#realTimeDatabase h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 6%;
+    bottom: 40px;
+}#realTimeDatabase p{
+    color:  #797979;
+    position: relative;
+    left: 6%;
+    top: 30%;
+
+}#realTimeDatabase button{
+    position: relative;
+    left: 6%;
+    top: 60px;
+
+    width: 40%;
+    height: 35px;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+
+    cursor: pointer;
+}#realTimeDatabase button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+
+
+    /* Features 2.0 page */
+
+.features-container-2{
+    width: 100%;
+    height: 345px;
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+
+    position: relative;
+    top: 320px;
+}
+
+.features-2{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 90px;
+    
+}#text2{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text2 h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text2 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#appHosting{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#appHosting img{
+
+}
+#appHosting h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+    /* margin-bottom: 4%; */
+    top: 12%;
+}#appHosting p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    top: 10%;
+
+}#appHosting button{
+    position: relative;
+    left: 5%;
+    top: 15%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#appHosting button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+
+#new-alertBgAH{
+     width: 80px;
+    height: 45px;
+    background-color: rgb(12, 123, 249);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 70%;
+    bottom: 295px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}#new-alertBgAH p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px; 
+    color: #fff;
+    position: relative;
+    top: 1.5%;
+    left: -1%;
+}
+
+#hosting{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#hosting img{
+
+}
+#hosting h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#hosting p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#hosting button{
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#hosting button:hover{
+
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+
+    /* Features 3.0 page */
+
+.features-container-3{
+    width: 100%;
+    height: 345px;
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+
+    position: relative;
+    top: 480px;
+}
+
+.features-3{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 90px;
+    
+}#text3{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text3 h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text3 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#appCheck{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#appCheck img{
+
+}
+#appCheck h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#appCheck p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#appCheck button{
+
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#appCheck button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+#authentication{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#authentication img{
+
+}
+#authentication h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#authentication p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#authentication button{
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#authentication button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+
+
+    /* Features 4.0 page */
+
+.features-container-4{
+    width: 100%;
+    height: 345px;
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+
+    position: relative;
+    top: 640px;
+}
+
+.features-4{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 90px;
+    
+}#text4{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text4 h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text4 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#cloudStorage{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#cloudStorage img{
+
+}
+#cloudStorage h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#cloudStorage p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#cloudStorage button{
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#cloudStorage button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+#cloudFunctions{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#cloudFunctions img{
+
+}
+#cloudFunctions h3{
+font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#cloudFunctions p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+}#cloudFunctions button{
+    position: relative;
+    left: 5%;
+    top: -10%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#cloudFunctions button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+
+
+
+/* ICON FIX: Align images to top-left inside all feature cards */
+.features img,
+#firbaseAI img,
+#genKit img,
+#machineLearning img,
+#dataConnect img,
+#cloudFirestore img,
+#realTimeDatabase img,
+#appHosting img,
+#hosting img,
+#appCheck img,
+#authentication img,
+#cloudStorage img,
+#cloudFunctions img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+
+    position: relative;
+    top: 30px;
+    left: 30px;
+
+    margin-bottom: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Second Dark Background */
+
+.second-blackBG{
+    width: 100%;
+    height: 150vh;
+    background-color: #1b1b1b;
+
+    position: relative;
+    top: 750px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/* .second-blackBG {
+    width: 100%;
+    background-color: #1b1b1b;
+    padding-bottom: 100px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    
+    z-index: 1;
+} */
+
+
+#firstText{
+    width: 40%;
+    height: 40%;
+    /* background-color: skyblue; */
+    
+    position: relative;
+    top: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}#firstText p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 130%;
+    color: #fff;
+}#firstText h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 230%;
+    position: relative;
+    top: 7%;
+    color: #fff;
+}
+
+    /* SLIDER */
+.extensions-section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.extensions-section h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.extensions-section p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+    /* Div After Slider */
+
+.new-section{
+    width: 100%;
+    height: 60%;
+    background-color: #1b1b1b;
+
+    position: relative;
+    /* top: 10%; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.low-left-wrap{
+    width: 40%;
+    height: 100%;
+    /* background-color: #797979; */
+
+    position: relative;
+    /* right: ; */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 2%;   
+
+    
+
+}#low-left{
+    width: 80%;
+    height: 68%;
+    /* background-color: #592424; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+
+}#low-left h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 100;
+
+    position: relative;
+    bottom: 7%;
+    
+}#low-left h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    
+}
+#low-left button{
+    width: 35%;
+    height: 15%;
+    border: solid 2px orange;
+    background-color: transparent;
+    color: #fff;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    border-radius: 40px;
+    position: relative;
+    top: 13%;
+    
+}#low-left button:hover{
+    background-color: orange;
+    transition: ease-in-out;
+    
+}
+
+
+
+.low-right-wrap{
+    width: 40%;
+    height: 60%;
+    /* background-color: #797979; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}#low-right{
+    width: 80%;
+    height: 88%;
+    /* background-color: #592424; */
+    position: relative;
+    left: 10%;
+    display: flex ;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+
+}#low-right h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    font-size: 30px;
+
+}
+#low-right button{
+    width: 28%;
+    height: 20%;
+    border: solid 2px orange;
+    background-color: transparent;
+    color: #fff;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    border-radius: 40px;
+    position: relative;
+    top: 17%;
+
+}#low-right button:hover{
+    background-color: orange;
+    transition: ease-in-out;
+    
+}
+
+#low-right img{
+    width: 20%;
+    position: relative;
+    right: 2%;
+    bottom: 17%;
+
+}.center-rule{
+
+    width: 0.02%;
+    height: 50%;
+    background-color: gray;
+    opacity: 50%;
+
+    position: relative;
+    right: 40%;
+
+}
+
+    /* Last White Div */
+.new-white-wrap{
+    width: 80%;
+    height: 200px;
+    background-color:white;
+
+    position: relative;
+    z-index: 1000;
+    top: 1074px;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* gap: 3%; */
+    flex-direction: row;
+
+
+}
+.left{
+    width: 58%;
+    height: 80%;
+     /* padding: 3%; */
+    
+    
+    /* background-color: burlywood; */
+    position: relative;
+    right: 8%;
+
+}.left h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 29px;
+    margin-top: 15%;
+    margin-left: 23%;
+
+    
+}
+.right{
+    width: 100vw;
+    height: 400px;
+    /* background-color:brown; */
+    /* margin-right: 20%; */
+    margin-top: 0%;
+    margin-right: 8%;
+    padding: 4%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* gap: 10%; */
+    
+
+/* }.right{
+    width: 70%;
+    height: 600px;
+    background-color: brown;
+    display: flex; */
+    
+   
+}.right p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    
+}.right  h4{
+    
+}
+
+#c1{
+    width: 80%;
+    height: 400px;
+    /* background-color: burlywood; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 5%; */
+
+     margin-right: 16%;
+    
+
+
+}#c1 h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger ;
+    font-weight: 300;
+    
+    color: black;
+    opacity: 80%;
+
+}#c1 p{
+    color: black;
+    opacity: 60%;
+}
+#c2{
+    width: 80%;
+    height: 250px;
+    margin-top: 6.5%;
+    /* background-color: burlywood; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 12%;
+    
+
+
+}#c2 p{
+    color: black;
+    opacity: 60%;
+}
+
+#c3{
+    width: 85%;
+    height: 430px;
+    /* background-color: burlywood; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 5%; */
+     margin-right: 12%;
+    
+
+
+}#c3 h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger ;
+    font-weight: 300;
+    
+    color: black;
+    opacity: 80%;
+
+}#c3 p{
+    color: black;
+    opacity: 60%;
+}
+#c4{
+    width: 60%;
+    height: 70px;
+    margin-top: 7%;
+    /* background-color: burlywood; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 5%; */
+    
+
+
+}#c4 p{
+    color: black;
+    opacity: 60%;
+}
+.foot{
+  width: 100%;  
+  height:200px;
+  /*  background-color: brown; */
+  z-index: 1000;
+  position: relative;
+  top: 1400px;
+  
+
+  display: flex;
+  align-items: center;
+  /* justify-content: center */
+}.sections{
+    width: 72.6%;
+    height: 100%;
+    /* padding: 2px; */
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 5%;
+}.sections h4{
+
+    
+
+}.sections p{
+    font-size: small;
+    opacity: 70%;
+
+}
+.sections > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#f2{
+    margin-left: 4.1%;
+}
+#f3{
+    margin-right: 12.3%;
+}
+
+
+/* 2nd to last section */
+
+.pre-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* keeps image on left and text on right */
+  /* align-items: flex-start; aligns items at top (vertical) */
+  /* background: yellow; */
+  border: 1px solid #ccc;
+  margin-top: 85%; /* consider removing if too far down */
+  padding: 8px;
+  gap: 2%;
+}
+
+.f-left {
+  /* flex: 1; */
+  /* width: 30%; */
+  height: 50px;
+  /* background-color: #2f2f2f; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.f-left img {
+  /* width: 100%; */
+  height: auto;
+  object-fit: cover; /* ensures image covers the div */
+}
+
+.f-right {
+  flex: 1;
+  text-align: left;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 3%;
+  padding: 10px;
+}
+
+.f-right p {
+  margin: 2px 0;
+  font-size: small;
+  opacity: 80%;
+}
+
+
+.f-left img {
+  width: 100px;
+  height: auto;
+}
+
+
+
+.footer{
+    width: 100%;
+    padding: 10px; 
+
+    display: flex;
+    justify-content: space-between;
+}
+.one{
+    width: 10%;
+    /* background-color: rosybrown; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.one p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 70%;
+}
+
+.two{
+    width: 10%;
+    /* background-color: rosybrown; */
+    
+    display: flex;
+    justify-content: center;
+}
+.two button{
+    width: 100%;
+    height: 30px;
+}

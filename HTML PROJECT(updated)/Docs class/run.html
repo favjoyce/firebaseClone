@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Docs Clone - Run</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="run.css">
+</head>
+<body>
+    
+
+             <section class="docs-header">
+    <div class="docs-title">
+      <h2>Documentation</h2>
+      <p>Developer documentation for Firebase</p>
+    </div>
+    <nav class="docs-nav">
+      <ul>
+        <li><a href="project.html">Overview</a></li>
+
+                <li class="dropdown nav-item">
+          <a href="fundamentals.html" class="nav-link">Fundamentals ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Firebase – Apple platforms</a></li>
+            <li><a href="#">Add Firebase – Android</a></li>
+            <li><a href="#">Add Firebase – Web</a></li>
+            <li><a href="#">Add Firebase – Flutter</a></li>
+            <li><a href="#">Add Firebase – C++</a></li>
+            <li><a href="#">Add Firebase – Unity</a></li>
+            <li><a href="#">Add Firebase – Server environments</a></li>
+            <li><a href="#">Manage Firebase projects</a></li>
+            <li><a href="#">Supported platforms & frameworks</a></li>
+            <li><a href="#">Use Emulator Suite</a></li>
+            <li><a href="#">AI assistance with Gemini in Firebase</a></li>
+          </ul>
+        </li>
+
+                <li class="dropdown two-column">
+          <a href="ai.html" class="nav-link">AI ▼</a>
+          <div class="dropdown-content two-column">
+            <div class="dropdown-column">
+              <h4>Develop with AI</h4>
+              <p><strong>Firebase Studio</strong><br>Build and ship full-stack AI-infused apps right from your browser.</p>
+              <p><strong>Gemini in Firebase</strong><br>Streamline development with this AI-powered assistant in the Firebase console.</p>
+            </div>
+            <div class="dropdown-column">
+              <h4>Build AI-powered apps</h4>
+              <p><strong>Firebase AI Logic</strong><br>Build AI-powered mobile and web apps and features with the Gemini and Imagen models using Firebase AI Logic.</p>
+              <p><strong>Genkit</strong><br>Build full-stack AI-powered applications using this open-source framework.</p>
+            </div>
+          </div>
+        </li>
+
+                <li class="dropdown">
+          <a href="build.html" class="nav-link">Build ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Emulator Suite</a></li>
+            <li><a href="#">Authentication</a></li>
+            <li><a href="#">App Check</a></li>
+            <li><a href="#">Data Connect</a></li>
+            <li><a href="#">Firestore</a></li>
+            <li><a href="#">Realtime Database</a></li>
+            <li><a href="#">Storage</a></li>
+            <li><a href="#">Security Rules</a></li>
+            <li><a href="#">App Hosting</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Cloud Functions</a></li>
+            <li><a href="#">Extensions</a></li>
+            <li><a href="#">ML</a></li>
+          </ul>
+        </li>
+                <li class="nav-item dropdown active">
+          <a href="run.html" class="nav-link">Run ▼</a>
+          <ul class="dropdown-menu run-dropdown">
+            <li><a href="#">Test Lab</a></li>
+          <li><a href="#">App Distribution</a></li>
+          <li><a href="#">Crashlytics</a></li>
+          <li><a href="#">Performance Monitoring</a></li>
+          <li><a href="#">Remote Config</a></li>
+          <li><a href="#">A/B Testing</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Cloud Messaging</a></li>
+          <li><a href="#">In-App Messaging</a></li>
+          <li><a href="#">Dynamic Links</a></li>
+          <li><a href="#">Google AdMob</a></li>
+          <li><a href="#">Google Ads</a></li>
+        </ul>
+      </li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="samples.html">Samples</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="docs-container">
+
+    <aside class="sidebar">
+  <input type="text" class="sidebar-search" placeholder="Filter" />
+
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="run.html" class="active">Overview</a></li>
+
+     <div class="sidebar-section">RELEASE</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Test Lab</a></li>
+    <li class="sidebar-item"><a href="#">App Distribution</a></li>
+  </ul>
+
+    <div class="sidebar-section">MONITOR</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Crashlytics</a></li>
+    <li class="sidebar-item"><a href="#">Performance Monitoring</a></li>
+  </ul>
+
+    <div class="sidebar-section">ITERATE</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Remote Config</a></li>
+    <li class="sidebar-item"><a href="#">A/B Testing</a></li>
+  </ul>
+
+      <div class="sidebar-section">ENGAGE</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Analytics</a></li>
+    <li class="sidebar-item"><a href="#">Cloud Messaging</a></li>
+    <li class="sidebar-item"><a href="#">In-App Messaging</a></li>
+    <li class="sidebar-item"><a href="#">Google AdMob</a></li>
+    <li class="sidebar-item"><a href="#">Google Ads</a></li>
+    <li class="sidebar-item"><a href="#">Dynamic Links</a></li>
+    <li class="sidebar-item"><a href="#">App Indexing</a></li>
+  </ul>
+
+  <div class="sidebar-section">RELATED PRODUCTS</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Authentication</a></li>
+    <li class="sidebar-item"><a href="#">Extensions</a></li>
+  </ul>
+</aside>
+
+<main class="run-main">
+    <section class="run-header">
+    <h1>Learn about products to help you <span>RUN</span> your app</h1>
+    <p>Run your app with confidence and deliver the best experience for your users.</p>
+    <p>Launch, monitor, and iterate with AI-assistive tools that help you optimize your app’s quality and <br>experience.</p>
+  </section>
+
+    <h2 class="run-section-header">Test your app and collect user feedback before release</h2>
+
+    <section class="run-card-section">
+        <div class="run-card">
+      <img src="pics/run_pics/cards.png" alt="Test Lab Illustration">
+      <h3 class="card-title">Test Lab</h3>
+      <p>Firebase Test Lab lets you run your app against a wide range of hosted devices 
+        so you can quality test before distributing to live testers. 
+        You can view your test results (including logs, videos, and screenshots) 
+        in the Firebase console or in a Google Cloud bucket.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+
+        <div class="run-card">
+      <img src="pics/run_pics/girlwithboxes.png" alt="App Distribution Illustration">
+      <h3 class="card-title">App Distribution</h3>
+      <p>Firebase App Distribution makes distributing your apps to trusted testers painless. 
+        By getting your apps onto testers' devices quickly, you can get feedback early and often. 
+        And if you use Crashlytics in your apps, you'll automatically get stability metrics for 
+        all your builds, so you know when you're ready to ship.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+  </section>
+
+  <section class="run-subsection">
+    <h2 class="run-section-header">Improve app stability and performance</h2>
+
+    <div class="run-card-section">
+        <div class="run-card">
+      <img src="pics/run_pics/mancatchingbee.png" alt="Crashlytics Illustration">
+      <h3 class="card-title">Crashlytics</h3>
+      <p>
+        Firebase Crashlytics is a lightweight, realtime crash reporter that helps you track,
+        prioritize, and fix stability issues in your app that erode your app quality.
+        Crashlytics saves you troubleshooting time by intelligently grouping crashes
+        and highlighting the circumstances that lead up to them.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+
+        <div class="run-card">
+      <img src="pics/run_pics/stats.png" alt="Performance Monitoring Illustration">
+      <h3 class="card-title">Performance Monitoring</h3>
+      <p>
+        Get insight into your app’s health and speed from your users’ point of view to address latency issues.
+        Read our guide to get started with Performance Monitoring features and tooling.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+  </div>
+</section>
+
+<section class="run-subsection">
+    <h2 class="run-section-header">Iterate and dynamically update your app</h2>
+
+    <div class="run-card-section">
+        <div class="run-card">
+      <img src="pics/run_pics/redandyellow.png" alt="Remote Config">
+      <h3 class="card-title">Remote Config</h3>
+      <p>
+       Remote Config is a cloud service that lets 
+       you change the behavior and appearance
+        of your app without requiring users to download an app update.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+
+        <div class="run-card">
+      <img src="pics/run_pics/nurse.png" alt="Nurse">
+      <h3 class="card-title">A/B Testing</h3>
+      <p>
+        A/B Testing helps you optimize your app experience by 
+        making it easy to run, analyze, and scale 
+        product and marketing experiments.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+  </div>
+</section>
+
+<section class="run-subsection">
+  <h2 class="run-section-header">Understand and engage with users</h2>
+
+  <div class="run-card-section smaller-cards">
+        <div class="run-card small-card">
+      <img src="pics/run_pics/boywithcomputer.png" alt="Boost Analytics Illustration">
+      <h3 class="card-title">Boost Analytics</h3>
+      <p>
+        Google Analytics provides event reports that help you understand how users interact with your app.
+        Analytics integrates across Firebase features and provides reporting for events you can define
+        using the Firebase SDK.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+
+        <div class="run-card small-card">
+      <img src="pics/run_pics/planes.png" alt="Cloud Messaging Illustration">
+      <h3 class="card-title">Cloud Messaging</h3>
+      <p>
+        Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that allows you to reliably
+        deliver messages and data to Android, iOS, and web devices at a low cost.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+
+        <div class="run-card small-card">
+      <img src="pics/run_pics/phone.png" alt="In-App Messaging Illustration">
+      <h3 class="card-title">In-App Messaging</h3>
+      <p>
+        Firebase In-App Messaging helps you engage your app’s active users by sending them targeted,
+        contextual messages that encourage them to use key app features.
+      </p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+  </div>
+</section>
+
+ <section class="legal-footer">
+  <p>
+    Except as otherwise noted, the content of this page is licensed under the 
+    <a href="#">Creative Commons Attribution 4.0 License</a>, and code samples are 
+    licensed under the <a href="#">Apache 2.0 License</a>. For details, see the 
+    <a href="#">Google Developers Site Policies</a>. Java is a registered trademark 
+    of Oracle and/or its affiliates.
+  </p>
+  <p class="update-date">Last updated 2025-04-22 UTC.</p>
+</section>
+
+  <section class="resources">
+    <div class="resources-grid">
+      <div class="res-card">
+        <h3>Learn</h3>
+        <ul>
+          <li>Developer guides</li>
+          <li>SDK & API reference</li>
+          <li>Samples</li>
+          <li>Libraries</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Stay connected</h3>
+        <ul>
+          <li>Check out the blog</li>
+          <li>Find us on Reddit</li>
+          <li>Follow on X</li>
+          <li>Subscribe on YouTube</li>
+          <li>Attend an event</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Support</h3>
+        <ul>
+          <li>Contact support</li>
+          <li>Stack Overflow</li>
+          <li>Slack community</li>
+          <li>Google group</li>
+          <li>Release notes</li>
+          <li>Brand guidelines</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <section class="footer-links">
+    <div class="platforms">
+      <a href="#">Android</a> •
+      <a href="#">Chrome</a> •
+      <a href="#">Firebase</a> •
+      <a href="#">Google Cloud Platform</a> •
+      <a href="#">All products</a>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>

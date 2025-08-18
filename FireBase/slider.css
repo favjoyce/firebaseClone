@@ -1,0 +1,147 @@
+  .carousel {
+    /* position: relative;
+    width: 900px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none; /* prevent text selection while dragging */
+
+   
+     
+
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+  
+    display: flex;
+     justify-content: center;
+    overflow: hidden;
+    user-select: none; /* prevent text selection while dragging */
+    cursor: grab;
+    
+
+    /* height: 340px; added height so cards fully show */
+
+    /* background-color: black; or whatever black you use */
+  /* padding: 70px 0; add vertical padding */
+
+    height: auto;   /* or remove height */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /* background-color: black; / */
+    /* other styles */
+  }
+  .cards-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 40px;
+    min-height: 100vh;
+    /* margin-top: 5%; */
+    position: relative;
+    top: 7%;
+    
+  }
+  .card {
+    /* background: #fff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    width: 40%;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.15);
+    flex-shrink: 0; */
+
+    width: 350px;   /* Increased from 300px */
+    height: 350px;  /* Increased from 300px */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+    padding: 20px;
+    margin: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card img {
+    width: 40%;
+    /* height: 50px; */
+    margin-bottom: 20px;
+    /* filter: invert(27%) sepia(68%) saturate(2637%) hue-rotate(196deg) brightness(91%) contrast(87%); */
+  }
+  .card h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #183752;
+  }
+  .card p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  .card a {
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+  }
+  .card a:hover {
+    text-decoration: underline;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #183752;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    user-select: none;
+    z-index: 1;
+  }
+  .arrow-left {
+    left: 10px;
+  }
+  .arrow-right {
+    right: 10px;
+  }
+  .dots {
+    margin-top: 20px;
+  }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1.5px solid #ff8c00;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: #ff8c00;
+  }
+  .explore-btn {
+    margin-top: 25px;
+    background: transparent;
+    border: 1.5px solid #ff8c00;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;  
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .explore-btn:hover {
+    background-color: #ff8c00;
+    color: #fff;
+  }

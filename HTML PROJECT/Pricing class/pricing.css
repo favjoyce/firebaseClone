@@ -1,0 +1,447 @@
+/* === Header === */
+.pricing-header {
+  padding: 60px 5% 30px;
+}
+
+.pricing-header h4 {
+  font-size: 16px;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+.pricing-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* === Outer White Card === */
+.pricing-wrapper {
+  background-color: white;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* === Pricing Table === */
+.pricing-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* === Table Rows and Cells === */
+.table-row {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+
+.table-row.no-border {
+    border-top: none;
+}
+
+.table-row:first-child {
+  border-top: none;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: black;
+}
+
+/* Add vertical lines between columns */
+.table-cell:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+/* === First Column === */
+.product-cell {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  width: 33%;
+}
+
+.label {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+/* === Product Names === */
+.product-name {
+  font-weight: 600;
+}
+
+.sub-product-name {
+  font-size: 14px;
+  color: #444;
+  margin-left: 10px;
+}
+
+strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: #202124;
+  line-height: 1.4;
+  font-family: 'Google Sans', Roboto, sans-serif;
+}
+
+/* === Spark & Blaze Plan Columns === */
+.spark-cell {
+  background-color: #039be5;
+  color: white;
+  width: 33%;
+}
+
+.blaze-cell {
+  background-color: #1e2a35;
+  color: white;
+  width: 34%;
+}
+
+.plan-name {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: white;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link {
+  display: inline-block;
+  color: #039be5;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.note {
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 12px;
+}
+
+.center-cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* === Sublabels for App Hosting === */
+.sub-label {
+  font-size: 14px;
+  color: #444;
+}
+
+.sub-sub-label {
+  font-size: 13px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.note-box {
+  background-color: #e8f0fe;
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #202124;
+  border-radius: 4px;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #dadce0;
+  color: #202124;
+  font-size: 13px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  background-color: #202124;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  width: 260px;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  white-space: normal;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  display: block;
+}
+
+/* === Pricing Notes Styling === */
+.pricing-notes {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.pricing-notes a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.blaze-calculator {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #202124;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blaze-calculator h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.blaze-calculator .subheading {
+  text-align: center;
+  font-size: 16px;
+  color: #5f6368;
+  margin-bottom: 30px;
+}
+
+.blaze-calculator .subheading a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.calculator-box {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-section {
+  padding: 30px 0;
+}
+
+.product-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0;
+}
+
+.calculator-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.calculator-left img {
+  width: 40px;
+  height: 40px;
+}
+
+.firestore-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.calculator-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-header {
+  font-weight: 500;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.horizontal-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 10px 0 20px 0;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.label {
+  width: 25%;
+  font-weight: 500;
+}
+
+.slider-cell {
+  width: 50%;
+}
+
+.slider-cell input[type="range"] {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.slider-text {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.slider-text span {
+  display: block;
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.cost {
+  width: 20%;
+  text-align: right;
+  font-weight: 500;
+}
+
+.egress-note {
+  font-size: 13px;
+  color: #5f6368;
+  margin-top: 10px;
+}
+
+.egress-note a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.faq-separate-section {
+  background-color: #121212; /* Matches Firebase pricing page dark background */
+  padding: 80px 20px;
+}
+
+.faq-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.faq-text {
+  font-size: 16px;
+  font-weight: 900;
+  color: #202124;
+  line-height: 1.5;
+}
+
+.faq-btn {
+  background-color: #1a73e8;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-btn:hover {
+  background-color: #1669c1;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}

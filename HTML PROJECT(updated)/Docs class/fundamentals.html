@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Docs Clone - Fundamentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="fundamentals.css">
+</head>
+<body>
+
+        <section class="docs-header">
+    <div class="docs-title">
+      <h2>Documentation</h2>
+      <p>Developer documentation for Firebase</p>
+    </div>
+    <nav class="docs-nav">
+      <ul>
+        <li><a href="project.html">Overview</a></li>                
+        <li class="dropdown nav-item active">           
+        <a href="fundamentals.html" class="nav-link">Fundamentals ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Firebase – Apple platforms</a></li>
+            <li><a href="#">Add Firebase – Android</a></li>
+            <li><a href="#">Add Firebase – Web</a></li>
+            <li><a href="#">Add Firebase – Flutter</a></li>
+            <li><a href="#">Add Firebase – C++</a></li>
+            <li><a href="#">Add Firebase – Unity</a></li>
+            <li><a href="#">Add Firebase – Server environments</a></li>
+            <li><a href="#">Manage Firebase projects</a></li>
+            <li><a href="#">Supported platforms & frameworks</a></li>
+            <li><a href="#">Use Emulator Suite</a></li>
+            <li><a href="#">AI assistance with Gemini in Firebase</a></li>
+          </ul>
+        </li>
+
+                <li class="dropdown two-column">
+          <a href="ai.html" class="nav-link">AI ▼</a>
+          <div class="dropdown-content two-column">
+            <div class="dropdown-column">
+              <h4>Develop with AI</h4>
+              <p><strong>Firebase Studio</strong><br>Build and ship full-stack AI-infused apps right from your browser.</p>
+              <p><strong>Gemini in Firebase</strong><br>Streamline development with this AI-powered assistant in the Firebase console.</p>
+            </div>
+            <div class="dropdown-column">
+              <h4>Build AI-powered apps</h4>
+              <p><strong>Firebase AI Logic</strong><br>Build AI-powered mobile and web apps and features with the Gemini and Imagen models using Firebase AI Logic.</p>
+              <p><strong>Genkit</strong><br>Build full-stack AI-powered applications using this open-source framework.</p>
+            </div>
+          </div>
+        </li>
+
+                <li class="dropdown">
+          <a href="build.html" class="nav-link">Build ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Emulator Suite</a></li>
+            <li><a href="#">Authentication</a></li>
+            <li><a href="#">App Check</a></li>
+            <li><a href="#">Data Connect</a></li>
+            <li><a href="#">Firestore</a></li>
+            <li><a href="#">Realtime Database</a></li>
+            <li><a href="#">Storage</a></li>
+            <li><a href="#">Security Rules</a></li>
+            <li><a href="#">App Hosting</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Cloud Functions</a></li>
+            <li><a href="#">Extensions</a></li>
+            <li><a href="#">ML</a></li>
+          </ul>
+        </li>
+                <li class="nav-item dropdown">
+          <a href="run.html" class="nav-link">Run ▼</a>
+          <ul class="dropdown-menu run-dropdown">
+            <li><a href="#">Test Lab</a></li>
+          <li><a href="#">App Distribution</a></li>
+          <li><a href="#">Crashlytics</a></li>
+          <li><a href="#">Performance Monitoring</a></li>
+          <li><a href="#">Remote Config</a></li>
+          <li><a href="#">A/B Testing</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Cloud Messaging</a></li>
+          <li><a href="#">In-App Messaging</a></li>
+          <li><a href="#">Dynamic Links</a></li>
+          <li><a href="#">Google AdMob</a></li>
+          <li><a href="#">Google Ads</a></li>
+        </ul>
+      </li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="samples.html">Samples</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="docs-container">
+    
+<main>
+  <aside class="sidebar-container">
+    <div class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" placeholder="Filter" />
+      </div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item active">
+          <a class="sidebar-link">
+            Fundamentals
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class="sidebar-item dropdown">
+          <a class="sidebar-link">
+            Get started with Firebase
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class="sidebar-item dropdown">
+          <a class="sidebar-link">
+            Manage your Firebase projects
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class="sidebar-item dropdown">
+          <a class="sidebar-link">
+            Platforms and frameworks
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class="sidebar-item dropdown">
+          <a class="sidebar-link">
+            Prototype and test with Emulator Suite
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+        <li class="sidebar-item dropdown">
+          <a class="sidebar-link">
+            AI-assisted development
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06L10 13.06a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <div class="main-content">
+    <div class="page-header">
+    </div>
+    </div>
+</main>
+
+   <main class="main-content">
+  <section class="hero-section">
+    <h1 class="page-title">Learn Firebase fundamentals</h1>
+    <p class="page-description">
+      <p>Get started with a Firebase project and adding Firebase to your app.</p>
+      <p>Explore key concepts and best practices for managing your project, protecting user privacy, and launching your app.</p>
+  </section>
+    <div class="card-container">
+      <div class="info-card">
+        <img src="pics/fundamentals_pics/girlwithcomputer.png" alt="Add Firebase"/>
+        <h3>Add Firebase to your app</h3>
+        <p>Set up and integrate Firebase into your iOS, Android, web, Flutter, and Unity apps.</p>
+        <a href="#" class="card-button">View documentation</a>
+      </div>
+      <div class="info-card">
+        <img src="pics/fundamentals_pics/manwithcomputer.png" alt="Manage Firebase"/>
+        <h3>Manage Firebase</h3>
+        <p>Organize and manage your Firebase projects, apps, and services with best practices.</p>
+        <a href="#" class="card-button">View documentation</a>
+      </div>
+      <div class="info-card">
+        <img src="pics/fundamentals_pics/manwithphone.png" alt="Protect user data"/>
+        <h3>Protect user data</h3>
+        <p>Learn how Firebase helps protect user and app data with privacy and security practices.</p>
+        <a href="#" class="card-button">View documentation</a>
+      </div>
+    </div>
+
+    <section class="platform-section">
+  <h2>Jump into Firebase on your platform</h2>
+  <p>Start developing on your platform now, following hands-on Codelabs and the platform SDK reference documentation.</p>
+
+  <div class="platform-grid">
+        <div class="platform-card">
+      <div class="platform-icon ios">iOS</div>
+      <h4>iOS</h4>
+      <a href="#">Codelabs</a> | <a href="#">API reference</a>
+    </div>
+
+        <div class="platform-card">
+      <div class="platform-icon android">📱</div>
+      <h4>Android</h4>
+      <a href="#">Codelabs</a> | <a href="#">API reference</a>
+    </div>
+
+        <div class="platform-card">
+      <div class="platform-icon web">🌐</div>
+      <h4>Web</h4>
+      <a href="#">Codelabs</a> | <a href="#">API reference</a>
+    </div>
+
+        <div class="platform-card">
+      <div class="platform-icon cpp">C++</div>
+      <h4>C++</h4>
+      <a href="#">API reference</a>
+    </div>
+
+        <div class="platform-card">
+      <div class="platform-icon unity">🎮</div>
+      <h4>Unity</h4>
+      <a href="#">API reference</a>
+    </div>
+
+        <div class="platform-card">
+      <div class="platform-icon admin">🔐</div>
+      <h4>Admin SDK</h4>
+      <a href="#">API reference</a>
+    </div>
+  </div>
+</section>
+
+<section class="concepts-section">
+  <h2>Learn Firebase concepts</h2>
+  <div class="concepts-grid">
+    
+        <div class="concept-card">
+      <img src="pics/fundamentals_pics/girlwithcomputer2.png" alt="Key concepts">
+      <h3>Key concepts</h3>
+      <p>Learn about key concepts applicable to any app or project, like app security and launch checklists:</p>
+      <ul>
+        <li><a href="#">Understand Firebase projects</a></li>
+        <li><a href="#">Review security checklist</a></li>
+        <li><a href="#">Review launch checklist</a></li>
+      </ul>
+    </div>
+
+        <div class="concept-card">
+      <img src="pics/fundamentals_pics/herowithcape.png" alt="Advanced concepts">
+      <h3>Advanced concepts</h3>
+      <p>Learn about more advanced topics that might arise in specific situations, like managing app installations or importing/exporting data:</p>
+      <ul>
+        <li><a href="#">Manage Firebase installations</a></li>
+        <li><a href="#">Import segments</a></li>
+        <li><a href="#">Export data to BigQuery</a></li>
+      </ul>
+    </div>
+
+    <section class="legal-footer">
+  <p>
+    Except as otherwise noted, the content of this page is licensed under the 
+    <a href="#">Creative Commons Attribution 4.0 License</a>, and code samples are 
+    licensed under the <a href="#">Apache 2.0 License</a>. For details, see the 
+    <a href="#">Google Developers Site Policies</a>. Java is a registered trademark 
+    of Oracle and/or its affiliates.
+  </p>
+  <p class="update-date">Last updated 2025-05-05 UTC.</p>
+</section>
+
+  <section class="resources">
+    <div class="resources-grid">
+      <div class="res-card">
+        <h3>Learn</h3>
+        <ul>
+          <li>Developer guides</li>
+          <li>SDK & API reference</li>
+          <li>Samples</li>
+          <li>Libraries</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Stay connected</h3>
+        <ul>
+          <li>Check out the blog</li>
+          <li>Find us on Reddit</li>
+          <li>Follow on X</li>
+          <li>Subscribe on YouTube</li>
+          <li>Attend an event</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Support</h3>
+        <ul>
+          <li>Contact support</li>
+          <li>Stack Overflow</li>
+          <li>Slack community</li>
+          <li>Google group</li>
+          <li>Release notes</li>
+          <li>Brand guidelines</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <section class="footer-links">
+    <div class="platforms">
+      <a href="#">Android</a> •
+      <a href="#">Chrome</a> •
+      <a href="#">Firebase</a> •
+      <a href="#">Google Cloud Platform</a> •
+      <a href="#">All products</a>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+ <script>
+  function toggleDropdown(element) {
+    const parent = element.parentElement;
+    parent.classList.toggle("active");
+  }
+</script>
+  </main>
+</div>
+
+    
+</body>
+</html>

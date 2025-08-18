@@ -1,0 +1,395 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carousel Cards with Drag</title>
+<style>
+  body {
+    background-color: #1c1c1c;
+    font-family: Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none; /* prevent text selection while dragging */
+    cursor: grab;
+  }
+  .cards-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 40px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px 30px;
+    width: 280px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.15);
+    flex-shrink: 0;
+  }
+  .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    filter: invert(27%) sepia(68%) saturate(2637%) hue-rotate(196deg) brightness(91%) contrast(87%);
+  }
+  .card h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #183752;
+  }
+  .card p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  .card a {
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+  }
+  .card a:hover {
+    text-decoration: underline;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #183752;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    user-select: none;
+    z-index: 1;
+  }
+  .arrow-left {
+    left: 10px;
+  }
+  .arrow-right {
+    right: 10px;
+  }
+  .dots {
+    margin-top: 20px;
+  }
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1.5px solid #ff8c00;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: #ff8c00;
+  }
+  .explore-btn {
+    margin-top: 25px;
+    background: transparent;
+    border: 1.5px solid #ff8c00;
+    color: #ff8c00;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .explore-btn:hover {
+    background-color: #ff8c00;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel" id="carousel">
+  <button class="arrow arrow-left" id="prev">&#8249;</button>
+  <div class="cards-container" id="cards">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/50/183752/google-big-query.png" alt="BigQuery Icon"/>
+      <h3>Stream Collections to BigQuery</h3>
+      <p>Sends realtime, incremental updates from a specified Cloud Firestore collection to BigQuery.</p>
+      <a href="#">Learn more →</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/50/183752/flag.png" alt="Email Icon"/>
+      <h3>Trigger Email</h3>
+      <p>Composes and sends an email based on the contents of a document written to a specified Cloud Firestore collection.</p>
+      <a href="#">Learn more →</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/50/183752/search.png" alt="Search Icon"/>
+      <h3>Search with Algolia</h3>
+      <p>Enables full text search of your data with Algolia.</p>
+      <a href="#">Learn more →</a>
+    </div>
+  </div>
+  <button class="arrow arrow-right" id="next">&#8250;</button>
+</div>
+
+<div class="dots" id="dots">
+  <span class="dot active" data-index="0"></span>
+  <span class="dot" data-index="1"></span>
+  <span class="dot" data-index="2"></span>
+</div>
+
+<button class="explore-btn">Explore Extensions</button>
+
+<script>
+  const cards = document.getElementById('cards');
+  const dots = document.querySelectorAll('.dot');
+  const totalCards = 3;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const offset = currentIndex * 320; // card width + gap (280 + 40)
+    cards.style.transition = 'transform 0.5s ease';
+    cards.style.transform = `translateX(-${offset}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updateCarousel();
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateCarousel();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = parseInt(dot.dataset.index);
+      updateCarousel();
+    });
+  });
+
+  // Drag to slide functionality
+  const carousel = document.getElementById('carousel');
+  let isDragging = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID = 0;
+
+  function getPositionX(event) {
+    return event.type.includes('touch') ? event.touches[0].clientX : event.clientX;
+  }
+
+  function animation() {
+    cards.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDragging) requestAnimationFrame(animation);
+  }
+
+  carousel.addEventListener('mousedown', dragStart);
+  carousel.addEventListener('touchstart', dragStart);
+  window.addEventListener('mouseup', dragEnd);
+  window.addEventListener('touchend', dragEnd);
+  window.addEventListener('touchcancel', dragEnd);
+  window.addEventListener('mousemove', dragMove);
+  window.addEventListener('touchmove', dragMove);
+
+  function dragStart(event) {
+    isDragging = true;
+    startX = getPositionX(event);
+    prevTranslate = -currentIndex * 320; // starting position
+    currentTranslate = prevTranslate;
+    cards.style.transition = 'none';
+    carousel.style.cursor = 'grabbing';
+    event.preventDefault();
+  }
+
+  function dragMove(event) {
+    if (!isDragging) return;
+    const currentPosition = getPositionX(event);
+    const diff = currentPosition - startX;
+    currentTranslate = prevTranslate + diff;
+    requestAnimationFrame(animation);
+  }
+
+  function dragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    carousel.style.cursor = 'grab';
+    const movedBy = currentTranslate - prevTranslate;
+
+    // If moved enough to slide to next or previous card
+    if (movedBy < -100 && currentIndex < totalCards - 1) {
+      currentIndex++;
+    } else if (movedBy > 100 && currentIndex > 0) {
+      currentIndex--;
+    }
+    updateCarousel();
+  }
+
+  // Initialize carousel position
+  updateCarousel();
+</script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="slider.css" />
+  <title>Firebase Build Products</title>
+</head>
+<body>
+  <div class="header"></div>
+
+  <div class="first-greyWrap">
+    <div class="topLeft-div">
+      <div class="build-bg"><h2>BUILD</h2></div>
+      <p>Get to market <br> quickly and <br> securely with <br> products that <br> can scale</p>
+      <p id="globally">globally.</p>
+    </div>
+    <div class="topRight-div">
+      <p>Build AI-powered experiences into your apps<br>
+      and accelerate your development with fully<br>
+      managed infrastructure, powered by Google<br>
+      Cloud, so you can focus on what matters most.</p>
+    </div>
+
+    <div class="build-products">
+      <div class="build-products-content-wrap">
+        <div class="left-wrap">
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_app_check_white.svg" alt="App Check">
+            <div id="ps"><p id="p0">App Check</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_hosting_white.svg" alt="App Hosting">
+            <div id="ps"><p id="p1">App Hosting</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_authentication_white.svg" alt="Authentication">
+            <div id="ps"><p id="p2">Authentication</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_functions_white.svg" alt="Cloud Functions">
+            <div id="ps"><p id="p3">Cloud Functions</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_storage_white.svg" alt="Cloud Storage">
+            <div id="ps"><p id="p4">Cloud Storage</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_data_connect_white.svg" alt="Data Connect">
+            <div id="ps"><p id="p5">Data Connect</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_extensions_white.svg" alt="Extensions">
+            <div id="ps"><p id="p6">Extensions</p></div>
+            <div id="arrows"><img id="pointer" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+        </div>
+
+        <div class="right-wrap">
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_ml_white.svg" alt="Firebase AI Logic">
+            <div class="ps1"><p id="p7">Firebase AI Logic</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_firestore_white.svg" alt="Firestore">
+            <div class="ps1"><p id="p8">Firestore</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_genkit_white.svg" alt="Genkit">
+            <div class="ps1"><p id="p9">Genkit</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_hosting_white.svg" alt="Hosting">
+            <div class="ps1"><p id="p10">Hosting</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_rtdb_white.svg" alt="Realtime Database">
+            <div class="ps1"><p id="p11">Realtime Database</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+          <div id="prod1">
+            <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_ai_logic_white.svg" alt="Firebase AI Logic SDKs">
+            <div class="ps1"><p id="p12">Firebase AI Logic SDKs</p></div>
+            <div id="arrows1"><img id="pointer1" src="assets/Icons/right-pointer.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="build-products-wrap"><p>BUILD PRODUCTS</p></div>
+    </div>
+  </div>
+
+  <div class="features-container">
+    <div class="features">
+      <div id="text"><h2>Enhance your app with <br>AI features</h2><p>Firebase offers seamless integrations<br>with the latest AI technology from<br>Google.</p></div>
+
+      <div id="firbaseAI">
+        <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_ai_logic_white.svg" alt="Firebase AI Logic">
+        <h3>Firebase AI Logic SDKs</h3><p>Build AI features by directly integrating…</p>
+        <button>Learn more</button>
+        <div id="new-alertBg"><p>NEW!</p></div>
+      </div>
+
+      <div id="genKit">
+        <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_genkit_white.svg" alt="Genkit">
+        <h3>Genkit</h3><p>Build, test, deploy…</p>
+        <button>Learn more</button>
+        <div id="new-alertBg"><p>NEW!</p></div>
+      </div>
+
+      <div id="machineLearning">
+        <img src="https://firebase-com.zproxy.org/static/images/products/icons/build_ml_white.svg" alt="Machine Learning">
+        <h3>Machine Learning</h3><p>Add machine learning capabilities…</p>
+        <button>Learn more</button>
+      </div>
+    </div>
+
+    <div class="features-1">...</div>
+    <div class="features-2">...</div>
+    <div class="features-3">...</div>
+    <div class="features-4">...</div>
+  </div>
+
+  <!-- slider & footer unchanged -->
+  <script src="slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+/* Layout */
+.docs-container {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Sidebar and dropdowns - unchanged for desktop */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.sidebar-item.active .dropdown-menu {
+    display: block;
+}
+
+.sidebar-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+    padding: 6px 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.sidebar-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-search {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 26px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.info-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.info-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: #0071f0;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.card-button:hover {
+    background-color: #005ac1;
+}
+
+/* Flex layout for sidebar + content + anchor box */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 32px 48px;
+}
+
+/* Right-side nav (Page Anchor Box) */
+.page-anchor-box {
+    flex: 0 0 220px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: sticky;
+    top: 100px;
+}
+
+.page-anchor-box h4 {
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.page-anchor-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.page-anchor-box li {
+    margin-bottom: 10px;
+}
+
+.page-anchor-box a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.page-anchor-box a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.firebase-intro {
+    flex: 1;
+    text-align: center;
+}
+
+.firebase-intro h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.firebase-intro .subtitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.firebase-intro .description {
+    font-size: 15px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.firebase-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.firebase-cards .card {
+    background-color: #eaf2ff;
+    border-radius: 8px;
+    padding: 16px;
+    width: 180px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.page-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* === PLATFORM GRID SECTION: Jump into Firebase on your platform === */
+
+.platform-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.platform-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.platform-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.platform-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.platform-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+}
+
+.platform-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.platform-card h4 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.platform-card a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+.platform-card a:hover {
+    text-decoration: underline;
+}
+
+/* === LEARN FIREBASE CONCEPTS SECTION (CENTERED) === */
+
+.concepts-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.concepts-section h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.concepts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.concept-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.concept-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.concept-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.concept-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.concept-card ul {
+    padding-left: 20px;
+}
+
+.concept-card ul li {
+    margin-bottom: 8px;
+}
+
+.concept-card a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.concept-card a:hover {
+    text-decoration: underline;
+}
+
+/* === LEGAL FOOTER SECTION === */
+
+.legal-footer {
+    margin: 60px 20px 40px;
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.6;
+}
+
+.legal-footer a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.legal-footer a:hover {
+    text-decoration: underline;
+}
+
+.legal-footer .update-date {
+    margin-top: 10px;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+    padding: 80px 40px;
+    background: #f1f3f4;
+}
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.res-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 12px;
+}
+.res-card ul {
+    list-style: none;
+    padding: 0;
+}
+.res-card li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+    padding: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #5f6368;
+    background-color: #fff;
+}
+.footer-links a {
+    color: #5f6368;
+    margin: 0 5px;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* === RESPONSIVE STYLES === */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .docs-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .info-card {
+        max-width: 48%; /* Allow cards to take up two columns */
+    }
+
+    .sidebar {
+        min-width: 250px;
+    }
+}
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+    .docs-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .docs-title {
+        text-align: left;
+    }
+
+    .docs-nav {
+        margin-top: 15px;
+    }
+    
+    .docs-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .docs-nav li {
+        white-space: nowrap;
+    }
+
+    .docs-container {
+        flex-direction: column; /* Stack sidebar and main content */
+        padding: 20px;
+        gap: 0; /* Remove gap when stacked */
+    }
+
+    .sidebar {
+        min-width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .sidebar-menu {
+        border-top: 1px solid #ddd;
+    }
+
+    .sidebar-search {
+        padding-top: 0;
+    }
+
+    .page-anchor-box {
+        display: none; /* Hide the sticky right-side nav on mobile */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px;
+    }
+    
+    .info-card {
+        max-width: 100%; /* Each card takes up full width */
+        min-width: unset;
+    }
+
+    .platform-section {
+        padding: 20px;
+    }
+    
+    .platform-grid {
+        gap: 20px;
+    }
+    
+    .platform-card {
+        width: 100%; /* Each platform card takes up full width */
+    }
+    
+    .concepts-section {
+        padding: 20px;
+    }
+
+    .concepts-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .concept-card {
+        max-width: 100%;
+    }
+
+    .legal-footer, .footer-links, .resources {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr; /* Stack resource cards */
+    }
+
+    .res-card {
+        padding: 20px;
+    }
+
+}

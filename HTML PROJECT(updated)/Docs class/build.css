@@ -1,0 +1,483 @@
+/*GLOBAL RESET AND BASE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #202124;
+}
+
+.docs-container {
+  display: flex;
+  padding: 0 40px 40px 20px; /* Reduced left padding */
+  gap: 40px;
+  border-right: 1px solid #e0e0e0; /* This is the demarcation line */
+}
+
+
+/*==============================
+  Sidebar
+===============================*/
+.sidebar {
+  width: 280px;
+  padding: 24px;
+  border-right: 1px solid #dadce0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow-y: auto;
+  top: 0;
+}
+
+.filter-box {
+  margin-bottom: 24px;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 4px;
+  /* Added a bottom border to create a divider line between items */
+  border-bottom: 1px solid #dadce0;
+}
+
+.sidebar-item a {
+  display: block;
+  padding: 8px 12px;
+  color: #3c4043;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 15px;
+}
+
+/* Updated background color for the active item */
+.sidebar-item.active a {
+  background-color: #fce8e6; /* Light orange background */
+  color: #202124;
+  font-weight: bold;
+}
+
+/* To remove the bottom border from the active item, making it look cleaner */
+.sidebar-item.active {
+  border-bottom: none;
+}
+
+.related-products {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.related-products-title {
+  font-size: 13px;
+  color: #70757a;
+  padding-left: 12px;
+}
+
+/* === BUILD HEADER SECTION === */
+
+.build-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.build-header h1 {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.build-header p {
+  font-size: 16px;
+  color: #20212e;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* === SECTION TITLE LEFT === */
+.left-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #202124;
+  text-align: left;
+  margin-left: calc(50% - 375px); /* Adjust this until it lines up */
+  max-width: 360px;
+}
+
+
+/* === SECTION WRAPPER === */
+.build-section {
+  margin-bottom: 80px;
+}
+
+/* === CARD GRID (reuse from AI) === */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* === AI CARD (reuse styling from AI page) === */
+.ai-card {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+}
+
+.ai-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.ai-card h3 a {
+  font-size: 20px;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.ai-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.ai-card p {
+  font-size: 16px;
+  color: #20212e;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ===============================
+   IMAGE INSIDE CARD
+=============================== */
+.ai-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* === BUTTON STYLES === */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.blue-btn {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.blue-btn:hover {
+  background-color: #155ab6;
+}
+
+.outline-btn {
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+  background-color: white;
+}
+
+.outline-btn:hover {
+  background-color: #e8f0fe;
+}
+
+/* === RELATED VIDEOS SECTION === */
+.related-videos {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.related-videos h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #202124;
+}
+
+/* Video grid */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Individual video card */
+.video-card {
+  flex: 1 1 calc(33.333% - 24px);
+  max-width: calc(33.333% - 24px);
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+.video-card h3 {
+  font-size: 20px;
+  color: #1a73e8;
+  margin: 16px;
+}
+.video-card p {
+  font-size: 14px;
+  color: #5f6368;
+  margin: 0 16px 16px;
+  line-height: 1.5;
+}
+
+/* === LEGAL FOOTER SECTION === */
+
+.legal-footer {
+  margin: 60px 20px 40px;
+  font-size: 13px;
+  color: #5f6368;
+  line-height: 1.6;
+}
+
+.legal-footer a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  text-decoration: underline;
+}
+
+.legal-footer .update-date {
+  margin-top: 10px;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+    RESPONSIVENESS
+=============================== */
+
+/* Tablet and Smaller Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    /* General spacing adjustments */
+    .docs-container {
+        padding: 0 20px 40px;
+        gap: 20px;
+    }
+
+    .docs-header, .resources, .legal-footer, .footer-links {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Adjust main content padding */
+    .build {
+        padding: 0;
+    }
+
+    /* Left-aligned headers should center on smaller screens */
+    .left-header {
+        text-align: center;
+        margin: 0 auto 24px;
+        max-width: 100%;
+    }
+
+    /* Card grids stack vertically */
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Cards take full width on smaller screens */
+    .ai-card {
+        max-width: 100%;
+    }
+
+    /* Video grid stacks vertically */
+    .video-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .video-card {
+        max-width: 100%;
+    }
+}
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+    /* Main Docs layout adjustments */
+    .docs-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Sidebar disappears on mobile view */
+    .sidebar {
+        display: none;
+    }
+
+    /* Header and Nav adjustments */
+    .docs-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .docs-title {
+        margin-bottom: 10px;
+    }
+
+    /* Navigation items wrap into multiple lines */
+    .docs-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* Allow the nav to scroll horizontally if needed, as a fallback */
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .docs-nav li {
+        white-space: nowrap;
+    }
+
+   .docs-nav .dropdown.two-column .dropdown-content {
+        flex-direction: column;
+        min-width: unset;
+        width: 100%;
+        left: 0;
+    }
+    
+    .docs-nav .dropdown .dropdown-menu {
+        min-width: 100%;
+        left: 0;
+    }
+
+    /* Build page content adjustments */
+    .build-header {
+        margin-bottom: 40px;
+    }
+
+    .build-header h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .build-header p {
+        font-size: 14px;
+    }
+
+    .build-section {
+        margin-bottom: 60px;
+    }
+
+    /* Legal footer padding */
+    .legal-footer {
+        padding: 0 20px;
+    }
+
+    /* Resource links stack vertically */
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* For screens smaller than 480px (small phones) */
+@media (max-width: 480px) {
+    .docs-header {
+        padding: 15px;
+    }
+
+    .docs-title h2 {
+        font-size: 22px;
+    }
+
+    .docs-nav ul {
+        gap: 8px;
+    }
+    
+    .build {
+        padding: 15px;
+    }
+}

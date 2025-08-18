@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./RaïssaTona.css">
+</head>
+<body>
+    <body>
+  <div class="wrapper">
+    <div class="top-layer"></div>
+    
+
+    <div class="header">
+      <div class="leftside">
+        <div class="logo">
+          <img src="./images/OutlinedFirebaselogo.svg" alt="" class="outlinedlogo"/>
+          <p>Firebase</p>
+        </div>
+        <div class="nav-link">
+          <a href="#">Products</a>
+          <a href="#">Use cases</a>
+          <a href="#">Pricing</a>
+          <a href="#">Docs</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+      <div class="right_side">
+        <div class="darkmode">
+          <img src="./images/lightmood_icon.svg" alt="" class="icon Sun" />
+          <img src="./images/nightmood_icon.svg" alt="" class="icon Moon hidden">
+          <div class="divider"></div>
+          <img src="./images/connection_icon.svg" alt="" class="icon RSS" />
+        </div>
+        <div class="console">
+          <a href="">Go to console</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-page">
+     
+      <div class="topside">
+        
+        <div class="upperside">
+          <a href="../Firebasee.html">The Firebase Blog</a>
+        </div>
+        <div class="lowerside">
+          <a href="" class="middle_text">Fueld.AI's nutrition coach with Firebase and Google Cloud </a>
+          <div class="author_info">
+            <div class="image_holder">
+              <img src="./images/rai.png" alt="" class="author_img" />
+            </div>
+            <div class="author_title">
+              <div class="name">Raïssa Tona</div>
+              <div class="g">Head of Partnerships</div>
+             
+            </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="lowercontent">
+      <div class="leftcontent">
+        <div class="item onem">
+          <h5>June 25, 2025</h5><br>
+          <p>In today’s competitive app environment, building and shipping new features quickly is imperative. That’s why <a href="../Master_folder/Firebase_Summit/Buttons_Page4.html">Fueld.AI</a>'s two engineers turned to Firebase to create their health and nutrition app, which transforms the photo of a meal into insights and actionable health guidance. By using Firebase, the team was able to quickly bring their app to market and continue to add new AI features.</p><br>
+        </div>
+        <div class="item twom">
+          <h2>Laying a Firebase foundation</h2>
+          <p>Fueld.AI’s mission is to improve nutrition at scale by capturing meal insights, providing personalized AI coaching, and securely sharing data with health professionals.</p>
+          <p>Fueld.AI began building their app using Firebase and Google Cloud tools and services:</p>
+          <p class="o"><a href="">Firebase Authentication</a> enables single sign-on with a user’s Google and Apple accounts.</p>
+          <p class="o"><a href="">Cloud Storage for Firebase</a> stores an image once it’s taken. The app then retrieves and displays it on-demand across devices or the web for users or approved professionals to review a past meal.</p>
+          <p class="o"><a href="">Cloud Functions for Firebase</a> sends the photo from Cloud Storage via Genkit to Gemini for analysis to identify each food and nutritional values, then writes the data to Cloud Firestore.</p>
+          <p class="o" >Cloud <a href="">Firestore</a> flexible, NoSQL, database enables real-time synchronization, immediately returning meal data to the user, as granular access controls let coaches review client data to formulate dietary recommendations.</p>
+          <p  class="o"><a href="">Firebase Hosting</a> updates and distributes Fueld’s mobile and web apps, leveraging Google Cloud’s content delivery network for high availability and speed.</p>
+          <p class="o" ><a href="">Google Analytics</a> serves crucial insights for optimizing onboarding flows and attributing marketing traffic, while <a href="">Google Cloud Logging</a> helps with debugging and monitoring AI in production.</p>
+          <p class="o" >Google Analytics serves crucial insights for optimizing onboarding flows and attributing marketing traffic, while Google Cloud Logging helps with debugging and monitoring AI in production.</p>
+          <p class="o" >“In previous companies, I needed a full backend engineering team,” Fueld.AI’s Co-Founder Glenn Smith says. “I wouldn’t have been able to iterate at the early stages of our application as easily if I needed to manage and update the databases.”</p>
+        </div>
+        <div class="item threem">
+          <img src="./rona food.png" alt="">
+          <p>Fueld.AI’s two engineers found multiple ways to replicate the capabilities of larger teams using Firebase tools. For instance, deploying Cloud Functions independently of the app store releases enables rapid iteration and agile development of features in response to customer feedback. According to Smith, this was key to fixing issues, streamlining services, and achieving a near 100% uptime with automatic failover strategies.</p>
+        </div>
+        <div class="item fourm">
+          <h2>Upping the culinary game with Genkit</h2>
+          <p>As Fueld.AI’s membership grew, the team began investigating bringing more advanced AI capabilities to their app. One example lets users take a picture of the ingredients in their fridge or cupboards, and Gemini generates a unique recipe based on their dietary preferences, trainer’s recommendations, and nutritional needs.</p>
+          <p>While Smith and the Fueld.AI team spent long hours hand-coding the AI tools and logic for the initial build of the app, they switched to Genkit to automate AI workflows.</p>
+          <p>Using this new process to transform a photo into a recipe:</p>
+          <p class="o"><a href="">Genkit chains together API calls and instructions</a> to Google’s Gemini and Imagen models via Vertex AI.</p>
+          <p class="o"><a href="">Gemini 2.0 Flash deconstructs the contents</a> of the image and determines what ingredients are on hand.</p>
+          <p class="o"><a href="">Gemini studies notes</a> from the user’s trainer, dietician, and meal diary secured in Firestore and Cloud Storage for Firebase to create the recipe. If there’s no photograph to accompany the dish, Genkit calls Vertex AI to prompt Imagen to develop a preview and then stores the photo for future clients</p>
+          <p class="o">To further save time and resources, Fueld.AI built internal tools that <a href="">reuse the same Genkit flow</a> for quality assurance, and automatically regenerates AI images that fail to meet their standards.</p>
+          <p class="o">Throughout the entire lifecycle, Gemini Pro 2.5 acts as a ‘junior developer,’ <a href="">diagnosing and contextualizing errors, generating tailored code, boosting the small team’s abilities.</a></p>
+        </div>
+
+        <div class="item fivem">
+          <img src="./rone app.png" alt="">
+        </div>
+        <div class="item fivem">
+          <h2>Two engineers, one platform</h2>
+          <p>Only a few short years ago, building and scaling an always-available, AI-driven app and portal with such a small team would have been extremely difficult. “Our app would be nowhere near as good or capable without Firebase supporting it,” Smith declares. “It’s super fast to set up new apps and easy to scale.”</p>
+          <p>Experience for yourself how <a href="">Firebase</a>’s comprehensive suite of tools, Gemini 2.5 Pro’s advanced coding performance, and Genkit’s flexible framework can accelerate your development workflows and automate your AI backend.</p>
+        </div>
+         
+
+
+        <div class="developers ten">
+          <div class="top_rank"><button class="data_button next">Go Home</button></div>
+           <div class="top_rank"><button class="data_button next">/</button></div>
+          <div class="top_rank"><button class="data_button next">Scroll to Top</button></div>
+          <div></div>
+        </div>
+
+      </div>
+
+      <div class="rightcontent">
+        <p>Categories</p><br>
+        <div class="button_list">
+          <div class="button_wrapper">
+            <a href="./Buttons_Page.html"><button class="medium SKD">  Case Study</button></a> 
+            <p class="boo">Table of Content</p>
+            <a href=""><p>Laying a Firebase foundation </p> <p> Upping the culinary game with Genkit </p> <p>Two engineers, one platform</p></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    
+</body>
+
+<script src="./RaïssaTona.js"></script>
+
+</html>

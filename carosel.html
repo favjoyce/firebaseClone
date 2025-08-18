@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Carousel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+      margin: 0;
+    }
+
+    .carousel {
+      position: relative;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-images img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <div class="carousel">
+    <div class="carousel-images" id="carousel-images">
+      <img src="https://via.placeholder.com/300x200/ff7f7f" alt="Image 1" />
+      <img src="https://via.placeholder.com/300x200/7fbfff" alt="Image 2" />
+      <img src="https://via.placeholder.com/300x200/7fff7f" alt="Image 3" />
+    </div>
+    <button class="arrow left" id="prev">&#10094;</button>
+    <button class="arrow right" id="next">&#10095;</button>
+  </div>
+
+  <div class="dots" id="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+</div>
+
+<script>
+  const images = document.getElementById("carousel-images");
+  const dots = document.querySelectorAll(".dot");
+  let currentIndex = 0;
+
+  function updateCarousel(index) {
+    images.style.transform = `translateX(-${index * 300}px)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+    currentIndex = index;
+  }
+
+  document.getElementById("prev").addEventListener("click", () => {
+    let newIndex = (currentIndex - 1 + 3) % 3;
+    updateCarousel(newIndex);
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    let newIndex = (currentIndex + 1) % 3;
+    updateCarousel(newIndex);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      let index = parseInt(dot.getAttribute("data-index"));
+      updateCarousel(index);
+    });
+  });
+</script>
+
+</body>
+</html>

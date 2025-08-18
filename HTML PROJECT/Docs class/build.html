@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Docs Clone - Build</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="build.css">
+</head>
+<body>
+
+             <section class="docs-header">
+    <div class="docs-title">
+      <h2>Documentation</h2>
+      <p>Developer documentation for Firebase</p>
+    </div>
+    <nav class="docs-nav">
+      <ul>
+        <li><a href="project.html">Overview</a></li>
+
+                <li class="dropdown nav-item">
+          <a href="fundamentals.html" class="nav-link">Fundamentals ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Firebase – Apple platforms</a></li>
+            <li><a href="#">Add Firebase – Android</a></li>
+            <li><a href="#">Add Firebase – Web</a></li>
+            <li><a href="#">Add Firebase – Flutter</a></li>
+            <li><a href="#">Add Firebase – C++</a></li>
+            <li><a href="#">Add Firebase – Unity</a></li>
+            <li><a href="#">Add Firebase – Server environments</a></li>
+            <li><a href="#">Manage Firebase projects</a></li>
+            <li><a href="#">Supported platforms & frameworks</a></li>
+            <li><a href="#">Use Emulator Suite</a></li>
+            <li><a href="#">AI assistance with Gemini in Firebase</a></li>
+          </ul>
+        </li>
+
+                <li class="dropdown two-column">
+          <a href="ai.html" class="nav-link">AI ▼</a>
+          <div class="dropdown-content two-column">
+            <div class="dropdown-column">
+              <h4>Develop with AI</h4>
+              <p><strong>Firebase Studio</strong><br>Build and ship full-stack AI-infused apps right from your browser.</p>
+              <p><strong>Gemini in Firebase</strong><br>Streamline development with this AI-powered assistant in the Firebase console.</p>
+            </div>
+            <div class="dropdown-column">
+              <h4>Build AI-powered apps</h4>
+              <p><strong>Firebase AI Logic</strong><br>Build AI-powered mobile and web apps and features with the Gemini and Imagen models using Firebase AI Logic.</p>
+              <p><strong>Genkit</strong><br>Build full-stack AI-powered applications using this open-source framework.</p>
+            </div>
+          </div>
+        </li>
+
+                <li class="dropdown active">
+          <a href="build.html" class="nav-link">Build ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Emulator Suite</a></li>
+            <li><a href="#">Authentication</a></li>
+            <li><a href="#">App Check</a></li>
+            <li><a href="#">Data Connect</a></li>
+            <li><a href="#">Firestore</a></li>
+            <li><a href="#">Realtime Database</a></li>
+            <li><a href="#">Storage</a></li>
+            <li><a href="#">Security Rules</a></li>
+            <li><a href="#">App Hosting</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Cloud Functions</a></li>
+            <li><a href="#">Extensions</a></li>
+            <li><a href="#">ML</a></li>
+          </ul>
+        </li>
+                <li class="nav-item dropdown">
+          <a href="run.html" class="nav-link">Run ▼</a>
+          <ul class="dropdown-menu run-dropdown">
+            <li><a href="#">Test Lab</a></li>
+          <li><a href="#">App Distribution</a></li>
+          <li><a href="#">Crashlytics</a></li>
+          <li><a href="#">Performance Monitoring</a></li>
+          <li><a href="#">Remote Config</a></li>
+          <li><a href="#">A/B Testing</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Cloud Messaging</a></li>
+          <li><a href="#">In-App Messaging</a></li>
+          <li><a href="#">Dynamic Links</a></li>
+          <li><a href="#">Google AdMob</a></li>
+          <li><a href="#">Google Ads</a></li>
+        </ul>
+      </li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="samples.html">Samples</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="docs-container">
+
+<aside class="sidebar">
+  <input type="text" class="sidebar-search" placeholder="Filter" />
+
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="build.html" class="active">Overview</a></li>
+    <li class="sidebar-item"><a href="#">Emulator Suite</a></li>
+    <li class="sidebar-item"><a href="#">Authentication</a></li>
+    <li class="sidebar-item"><a href="#">App Check</a></li>
+    <li class="sidebar-item"><a href="#">Data Connect</a></li>
+    <li class="sidebar-item"><a href="#">Cloud Firestore</a></li>
+    <li class="sidebar-item"><a href="#">Realtime Database</a></li>
+    <li class="sidebar-item"><a href="#">Storage</a></li>
+    <li class="sidebar-item"><a href="#">Security Rules</a></li>
+    <li class="sidebar-item"><a href="#">App Hosting</a></li>
+    <li class="sidebar-item"><a href="#">Hosting</a></li>
+    <li class="sidebar-item"><a href="#">Cloud Functions</a></li>
+    <li class="sidebar-item"><a href="#">Extensions</a></li>
+    <li class="sidebar-item"><a href="#">Firebase ML</a></li>
+  </ul>
+
+  <div class="sidebar-section">RELATED PRODUCTS</div>
+  <ul class="sidebar-menu">
+    <li class="sidebar-item"><a href="#">Cloud Messaging</a></li>
+    <li class="sidebar-item"><a href="#">Remote Config</a></li>
+  </ul>
+</aside>
+
+<main class="build">
+
+<section class="build-header">
+  <h1>Learn about products to help you BUILD your app</h1>
+  <p>Get to market quickly and securely with products that can scale globally.</p>
+  <p>
+    Build AI-powered experiences into your apps and accelerate your development with
+    fully-managed infrastructure, powered by Google Cloud, so you can focus on what matters most.
+  </p>
+</section>
+
+<section class="build-section">
+  <h2 class="left-header">Featured topics</h2>
+  <div class="card-grid">
+    <div class="ai-card">
+        <img src="pics/build_pics/girlontag.png" alt="Girl">
+      <h3><a href="#">Ensure app security</a></h3>
+      <p>Firebase Authentication and Security Rules are central to a secure app. As you’re building and launching your app, keep these top tips in mind.</p>
+      <a href="#" class="btn blue-btn">Review the security checklist</a>
+    </div>
+    <div class="ai-card">
+        <img src="pics/build_pics/drives.png" alt="Drives">
+      <h3><a href="#">Emulator Suite is your first step</a></h3>
+      <p>You can develop Firebase apps in an offline sandbox, leaving your products and live services untouched, with the Firebase Local Emulator Suite. Take a look at a hands-on example of the process</p>
+      <a href="#" class="btn blue-btn">Prototype locally</a>
+    </div>
+  </div>
+</section>
+
+<section class="build-section">
+  <h2 class="left-header">Featured products</h2>
+  <div class="card-grid">
+    <div class="ai-card">
+        <img src="pics/build_pics/drives2.png" alt="Drives">
+      <h3><a href="#">Cloud Firestore</a></h3>
+      <p>Firestore is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud. It keeps your data in sync across client apps through realtime listeners and offers offline support for mobile and web so you can build responsive apps that work regardless of network latency or Internet connectivity.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+    <div class="ai-card">
+        <img src="pics/build_pics/chip.png" alt="Chip">
+      <h3><a href="#">Cloud Functions</a></h3>
+      <p>Cloud Functions for Firebase is a serverless framework that lets you automatically run backend code in response to events triggered by Firebase features and HTTPS requests. Your code is stored in Google servers so there's no need to manage and scale your own.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+    <div class="ai-card">
+        <img src="pics/build_pics/drives3.png" alt="Drives">
+      <h3><a href="#">Realtime Database</a></h3>
+      <p>The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client, with cross-platform support for iOS, Android, Web and more.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+  </div>
+</section>
+
+<section class="build-section">
+  <h2 class="left-header">Related Tools</h2>
+  <div class="card-grid">
+    <div class="ai-card">
+        <img src="pics/build_pics/drives4.png" alt="Drives">
+      <h3><a href="#">Firebase Local Emulator Suite</a></h3>
+      <p>Firebase Local Emulator Suite is a set of advanced tools for developers looking to build and test apps locally.</p>
+      <a href="#" class="btn outline-btn">Introduction</a>
+    </div>
+    <div class="ai-card">
+        <img src="pics/build_pics/chip2.png" alt="Chip">
+      <h3><a href="#">Cloud Functions shell</a></h3>
+      <p>The Cloud Functions shell provides an interactive shell for invoking functions with test data. The shell supports all trigger types.</p>
+      <a href="#" class="btn outline-btn">Guide to Functions shell</a>
+    </div>
+    <div class="ai-card">
+        <img src="pics/build_pics/drives5.png" alt="Drives">
+      <h3><a href="#">Firebase CLI</a></h3>
+      <p>The Firebase CLI provides a variety of tools for managing, viewing, and deploying to Firebase projects.</p>
+      <a href="#" class="btn outline-btn">CLI reference</a>
+    </div>
+  </div>
+</section>
+
+<section class="related-videos">
+  <h2>Related videos</h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/QcsAb2RR52c" title="Introducing Firestore" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Introducing Firestore</h3>
+      <p>Cloud Firestore is a NoSQL document database that simplifies storing, syncing, and querying data for your 
+        mobile and web apps at global scale. Its client libraries provide live synchronization 
+        and offline support, while its security features and integrations with the Firebase and 
+        Google Cloud platforms accelerate building truly serverless apps.</p>
+    </div>
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/8sGY55yxicA" title="Introducing Firebase Authentication" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Introducing Firebase Authentication</h3>
+      <p>Firebase Authentication makes authentication 
+        easy for end users and developers. 
+        It allows you to focus on your users, and not 
+        the sign-in infrastructure to support them.</p>
+    </div>
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/p5-BDRCAkMI" title="Introducing Firebase ML" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Introducing Firebase ML</h3>
+      <p>Developers are increasingly relying on machine learning to enhance their app’s user experience, 
+        and only with finely-tuned machine learning models can they deliver those 
+        powerful features to delight their users. Introducing Firebase Machine Learning, 
+        a set of tools and services for bringing powerful machine learning features to your app.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="legal-footer">
+  <p>
+    Except as otherwise noted, the content of this page is licensed under the 
+    <a href="#">Creative Commons Attribution 4.0 License</a>, and code samples are 
+    licensed under the <a href="#">Apache 2.0 License</a>. For details, see the 
+    <a href="#">Google Developers Site Policies</a>. Java is a registered trademark 
+    of Oracle and/or its affiliates.
+  </p>
+  <p class="update-date">Last updated 2025-05-05 UTC.</p>
+</section>
+
+  <section class="resources">
+    <div class="resources-grid">
+      <div class="res-card">
+        <h3>Learn</h3>
+        <ul>
+          <li>Developer guides</li>
+          <li>SDK & API reference</li>
+          <li>Samples</li>
+          <li>Libraries</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Stay connected</h3>
+        <ul>
+          <li>Check out the blog</li>
+          <li>Find us on Reddit</li>
+          <li>Follow on X</li>
+          <li>Subscribe on YouTube</li>
+          <li>Attend an event</li>
+        </ul>
+      </div>
+      <div class="res-card">
+        <h3>Support</h3>
+        <ul>
+          <li>Contact support</li>
+          <li>Stack Overflow</li>
+          <li>Slack community</li>
+          <li>Google group</li>
+          <li>Release notes</li>
+          <li>Brand guidelines</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <section class="footer-links">
+    <div class="platforms">
+      <a href="#">Android</a> •
+      <a href="#">Chrome</a> •
+      <a href="#">Firebase</a> •
+      <a href="#">Google Cloud Platform</a> •
+      <a href="#">All products</a>
+    </div>
+  </section>
+
+  </div>
+</section>
+
+</main>
+    
+</body>
+</html>

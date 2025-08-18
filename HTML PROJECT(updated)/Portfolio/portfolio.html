@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David's Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <h1 class="typing-text" id="typing-text"></h1>
+
+    <div class="profile-pic">
+      <img src="pics/your-photo.jpg" alt="Profile photo of David" />
+    </div>
+
+    <p>Frontend Developer • Designer</p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="section about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I'm a frontend developer with a passion for turning ideas into clean, responsive, and interactive web interfaces. I also create content and enjoy bringing tech concepts to life through visuals.
+    </p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Firebase Docs Clone</h3>
+        <p>A full HTML/CSS recreation of Firebase's documentation site with dropdown menus, sidebar navigation, and responsive layouts.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Pricing Page Clone</h3>
+        <p>A clean and structured clone of the Firebase Pricing page, complete with calculators, cost tables, and layout precision.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Support Page UI</h3>
+        <p>A sleek support/help center layout with hero text, CTA, and section-based navigation, mimicking Firebase's own support design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Have a project or want to collaborate? Reach out!</p>
+    <div class="social-links">
+      <a href="mailto:youremail@example.com"><img src="pics/email.png" alt="Email" /></a>
+      <a href="https://instagram.com/yourusername"><img src="pics/instagram.png" alt="Instagram" /></a>
+      <a href="https://linkedin.com/in/yourusername"><img src="pics/linkedin.png" alt="LinkedIn" /></a>
+      <a href="https://tiktok.com/@yourusername"><img src="pics/tiktok.png" alt="TikTok" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 David Nwosu. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Typing effect script -->
+<script>
+  const text = "David Nwosu";
+  const typingElement = document.getElementById("typing-text");
+  let index = 0;
+
+  function type() {
+    if (index <= text.length) {
+      typingElement.textContent = text.slice(0, index);
+      index++;
+      setTimeout(type, 150);
+    }
+  }
+  type();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+/*GLOBAL RESET AND BASE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #202124;
+}
+
+.docs-container {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  border-right: 1px solid #e0e0e0; /* This is the demarcation line */
+}
+
+/* Sidebar styling */
+.sidebar-container {
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0; /* Vertical demarcation line */
+}
+
+.sidebar-search-container {
+    padding: 15px; /* Add some padding around the search bar */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-section {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #5f6368; /* Use a gray color for the section headers */
+    text-transform: uppercase;
+    padding: 0 16px; /* Adjust padding to align with other list items */
+}
+
+.sidebar-item {
+    margin: 0; /* Remove margin to get rid of extra space */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-item a {
+    display: block;
+    text-decoration: none;
+    color: #333; /* Change link color to a darker gray */
+    font-size: 14px;
+    padding: 12px 16px; /* Adjust padding for better spacing */
+    border-radius: 0; /* Remove border-radius for a flush look */
+    transition: background-color 0.2s;
+}
+
+.sidebar-item a:hover {
+    background-color: #eee; /* Lighter hover color */
+}
+
+/* Active sidebar item styling */
+.sidebar-item.active a {
+    font-weight: 600;
+    color: #202124;
+    background-color: #fff8f2; /* Light orange background */
+    border-left: 3px solid #f99017; /* Orange vertical border */
+    padding-left: 13px; /* Adjust padding to account for the border width */
+}
+
+/*MAIN CONTENT*/
+.ai-main-content {
+  flex-grow: 1;
+  padding: 60px 40px;
+  min-height: 100vh;
+  background-color: #fff;
+  /* New styles to center and constrain the content */
+  max-width: 1200px; /* Adjust this value to control the max width */
+  margin: 0 auto; /* This centers the content on the page */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+/*HEADER TEXT BLOCKS*/
+.ai-header-top h1 {
+  font-size: 34px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.ai-header-top {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #5f6368;
+}
+
+/*HERO HEADINGS*/
+.ai-hero h2 {
+  font-size: 34px;
+  font-weight: 500;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: #202124;
+  text-align: center; /* Changed to left-align to match the reference */
+}
+
+/* ===============================
+    CARD GRID SECTION
+=============================== */
+.ai-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* Changed to flex-start to align left */
+  margin-bottom: 60px;
+}
+
+
+/* ===============================
+    INDIVIDUAL AI CARD
+=============================== */
+.ai-card {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+    IMAGE INSIDE CARD
+=============================== */
+.ai-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* New CSS for the content wrapper */
+.card-content-wrapper {
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures the wrapper takes up the remaining card space */
+}
+
+/* ===============================
+    CARD TEXT CONTENT
+=============================== */
+.card-content-wrapper h3 a {
+  font-size: 20px;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.card-content-wrapper h3 { /* Added this rule to fix spacing */
+  margin-top: 0;
+}
+
+.card-content-wrapper h3 a:hover {
+  text-decoration: underline;
+}
+
+.card-content-wrapper p {
+  font-size: 16px;
+  color: #5f6368;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/*INTRO BUTTON*/
+.intro-btn {
+  display: inline-block; /* Changed to inline-block to prevent it from stretching */
+  padding: 10px 16px;
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+  background-color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  align-self: flex-start; /* Aligns the button to the left within the flex container */
+}
+
+.intro-btn:hover {
+  background-color: #f1f3f4;
+}
+
+/* === LEGAL FOOTER SECTION === */
+
+.legal-footer {
+  margin: 60px 20px 40px;
+  font-size: 13px;
+  color: #5f6368;
+  line-height: 1.6;
+}
+
+.legal-footer a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  text-decoration: underline;
+}
+
+.legal-footer .update-date {
+  margin-top: 10px;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE STYLES === */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .docs-container {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .docs-header, .resources, .legal-footer, .footer-links {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ai-main-content {
+        padding: 40px 20px;
+    }
+}
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+    /* Header and Nav */
+    .docs-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .docs-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .docs-nav li {
+        white-space: nowrap;
+    }
+    
+    .docs-nav .dropdown.two-column .dropdown-content {
+        flex-direction: column;
+        min-width: unset;
+        width: 100%;
+        left: 0;
+    }
+    
+    .docs-nav .dropdown .dropdown-menu {
+        min-width: 100%;
+        left: 0;
+    }
+    
+    /* Main Layout */
+    .docs-container {
+        flex-direction: column; /* Stack sidebar and main content */
+        padding: 20px;
+        gap: 0;
+    }
+    
+    .sidebar {
+        min-width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    .sidebar-menu {
+        border-top: 1px solid #ddd;
+    }
+    
+    .sidebar-search {
+        padding-top: 0;
+    }
+
+    /* AI Main Content */
+    .ai-main-content {
+        padding: 20px;
+    }
+
+    .ai-header-top h1 {
+        font-size: 28px;
+    }
+
+    .ai-header-top p {
+        font-size: 16px;
+    }
+
+    .ai-hero h2 {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+    
+    .ai-card-section {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px;
+    }
+    
+    .ai-card {
+        max-width: 100%; /* Each card takes up full width */
+    }
+
+    /* Footer Sections */
+    .resources-grid {
+        grid-template-columns: 1fr; /* Stack resource cards */
+        gap: 20px;
+    }
+    .res-card {
+        padding: 20px;
+    }
+
+    .legal-footer, .footer-links {
+        margin: 40px 20px 20px;
+    }
+}
+
+/* For screens smaller than 480px (small phones) */
+@media (max-width: 480px) {
+    .docs-header {
+        padding: 15px;
+    }
+
+    .docs-title h2 {
+        font-size: 22px;
+    }
+
+    .docs-nav ul {
+        gap: 8px;
+    }
+    
+    .ai-main-content {
+        padding: 15px;
+    }
+
+    .ai-header-top h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .ai-hero h2 {
+        font-size: 20px;
+    }
+}

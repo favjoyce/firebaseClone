@@ -1,0 +1,286 @@
+/* === SAMPLES PAGE === */
+.samples-main {
+  padding: 48px 64px;
+  box-sizing: border-box;
+}
+
+.samples-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #202124;
+  margin-bottom: 32px;
+}
+
+.samples-filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.samples-filters select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.samples-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #202124;
+}
+
+.samples-table th,
+.samples-table td {
+  padding: 16px 12px;
+  text-align: left;
+  border-top: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.samples-table th {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  color: #5f6368;
+  font-size: 13px;
+}
+
+/* === FIXED ICON STYLING === */
+.samples-table img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-left: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.samples-table a {
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.samples-table a:hover {
+  transform: scale(1.1);
+}
+
+.samples-table img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* === FOOTNOTE STYLE === */
+.samples-footnote {
+  font-size: 0.9rem;
+  color: #5f6368;
+  font-style: italic;
+  margin: 8px 64px;
+}
+
+.samples-subheader {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 56px 0 24px;
+}
+
+.sample-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #202124;
+  margin-bottom: 4px;
+}
+
+.sample-tags {
+  font-size: 0.85rem;
+  color: #5f6368;
+}
+
+.samples-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 64px 0 24px;
+}
+
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+    RESPONSIVENESS
+=============================== */
+
+/* Tablet and Smaller Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    /* Main samples container */
+    .samples-main {
+        padding: 40px 20px;
+    }
+
+    /* Header text adjustments */
+    .samples-title, .samples-subheader, .samples-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 24px;
+    }
+
+    /* Filter inputs */
+    .samples-filters {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .samples-filters select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Table adjustments for smaller screens */
+    .samples-table {
+        border: 0;
+    }
+    
+    .samples-table thead {
+        display: none; /* Hide the table header on small screens */
+    }
+
+    .samples-table tr {
+        display: block; /* Make each row a block-level element */
+        margin-bottom: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .samples-table td {
+        display: block; /* Make each cell a block-level element */
+        text-align: right;
+        padding-left: 50%; /* Give space for the pseudo-element label */
+        position: relative;
+    }
+
+    .samples-table td::before {
+        content: attr(data-label); /* Use a data attribute to create labels from the header */
+        position: absolute;
+        left: 12px;
+        width: calc(50% - 24px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: #5f6368;
+        box-sizing: border-box;
+    }
+
+    /* Handle the specific columns with data labels */
+    .samples-table tbody tr td:nth-of-type(1)::before { content: "Title"; }
+    .samples-table tbody tr td:nth-of-type(2)::before { content: "Description"; }
+    .samples-table tbody tr td:nth-of-type(3)::before { content: "Links"; }
+
+    /* Fine-tune table content */
+    .samples-table img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .samples-footnote {
+        margin: 8px 20px;
+    }
+    
+    /* Footer sections */
+    .resources {
+        padding: 60px 20px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-links {
+        padding: 20px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Main content padding */
+    .samples-main {
+        padding: 20px;
+    }
+    
+    /* Headers text size */
+    .samples-title, .samples-subheader, .samples-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    /* Table cell padding and labels */
+    .samples-table td {
+        padding: 12px;
+        text-align: left;
+        padding-left: 12px;
+    }
+    
+    .samples-table td::before {
+        content: none; /* Hide the pseudo-element labels on smaller phones for a cleaner stack */
+    }
+
+    /* Footer links layout */
+    .footer-links .platforms a {
+        display: block;
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,360 @@
+.docs-container {
+  display: flex;
+  padding: 0 25px 25px 12px; /* Reduced left padding */
+  gap: 40px;
+  border-right: 1px solid #e0e0e0; /* This is the demarcation line */
+}
+
+
+/* === SEARCH INPUT === */
+.sidebar-search {
+  width: calc(100% - 24px); /* Adjust width to account for padding */
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+/* === SIDEBAR CONTAINER === */
+.sidebar {
+  width: 280px; /* Adjust the width to make it wider */
+  border-right: 1px solid #dadce0; /* Add the vertical demarcation line */
+  padding: 24px;
+  background-color: #ffffff; /* White background */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* === MENU LIST === */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === SECTION TITLE (e.g. RELATED PRODUCTS) === */
+.sidebar-section {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5f6368;
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+
+/* === MENU ITEM STYLING === */
+.sidebar-item {
+  margin: 0;
+  padding: 0; /* Remove padding from the list item */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #5f6368; /* Gray color for inactive links */
+  font-size: 14px;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+  padding: 8px 12px; /* Adjust padding for better spacing */
+}
+
+.sidebar-item a:hover {
+  background-color: #f1f3f4; /* Lighter gray hover color */
+}
+
+/* === ACTIVE MENU ITEM STYLING === */
+.sidebar-item.active a {
+  font-weight: 600;
+  color: #1a73e8; /* Firebase blue color for active text */
+  background-color: #fff8f2; /* Light blue background for active link */
+  border-radius: 4px; /* Maintain rounded corners */
+}
+
+/* ------------------------------
+   Run Page Main Content Styling
+--------------------------------*/
+.run-main {
+  padding: 60px 80px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #202124;
+  text-align: center;
+}
+
+.run-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.run-header p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+/* Main Section Header */
+.run-section-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 50px 0 30px;
+}
+
+/* Card Section */
+.run-card-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.run-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: left; /* Aligns card content like titles and text to the left */
+}
+
+
+.run-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  color: #1a73e8;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.run-card p {
+  font-size: 14px;
+  color: #3c4043;
+  line-height: 1.5;
+}
+
+/* Smaller Cards in a Row */
+.smaller-cards {
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Modify the size slightly */
+.small-card {
+  max-width: 320px;
+  padding: 18px;
+}
+
+/* === BUTTON STYLES === */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.blue-btn {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.blue-btn:hover {
+  background-color: #155ab6;
+}
+
+.outline-btn {
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+  background-color: white;
+}
+
+.outline-btn:hover {
+  background-color: #e8f0fe;
+}
+
+/* === LEGAL FOOTER SECTION === */
+
+.legal-footer {
+  margin: 60px 20px 40px;
+  font-size: 13px;
+  color: #5f6368;
+  line-height: 1.6;
+}
+
+.legal-footer a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.legal-footer a:hover {
+  text-decoration: underline;
+}
+
+.legal-footer .update-date {
+  margin-top: 10px;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+    RESPONSIVENESS
+=============================== */
+
+/* Tablet and Smaller Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    /* Main Docs container layout */
+    .docs-container {
+        flex-direction: column;
+        padding: 0 20px 40px;
+        gap: 20px;
+    }
+
+    /* Hide the sidebar for smaller screens */
+    .sidebar {
+        display: none;
+    }
+
+    /* Main content padding and alignment */
+    .run-main {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    /* Header text adjustments */
+    .run-header h1 {
+        font-size: 28px;
+    }
+
+    .run-header p {
+        font-size: 14px;
+        br { display: none; } /* Hide the <br> tag for a more fluid text flow */
+    }
+
+    /* Section headers alignment */
+    .run-section-header {
+        font-size: 22px;
+        margin: 40px 0 20px;
+    }
+
+    /* Card sections stack vertically */
+    .run-card-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Cards take full width */
+    .run-card {
+        max-width: 100%;
+    }
+
+    /* Adjust padding for resource and legal sections */
+    .resources {
+        padding: 60px 20px;
+    }
+
+    .legal-footer {
+        margin: 40px 20px 20px;
+    }
+}
+
+/* For screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+    /* Main content padding */
+    .run-main {
+        padding: 20px;
+    }
+
+    /* Header text size */
+    .run-header h1 {
+        font-size: 24px;
+    }
+
+    .run-header p {
+        font-size: 13px;
+    }
+
+    /* Card section and smaller cards adjustments */
+    .run-card-section.smaller-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .small-card {
+        max-width: 100%;
+    }
+
+    /* Resources grid layout */
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Footer links layout */
+    .footer-links .platforms a {
+        display: block;
+        margin: 5px 0;
+    }
+}

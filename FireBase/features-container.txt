@@ -1,0 +1,343 @@
+     <div class="features-container">
+<div class="features">
+    <div id="text">
+        <h2>
+            Enhance your app with <br>
+            AI features
+        </h2>
+        <p>
+            Firebase offers seamless integrations <br>
+            with the latest AI technology from <br>
+            Google.
+        </p>
+    </div>
+
+    <div id="firbaseAI">
+         <img src="assets/buildIcons/Firebase AI.png" alt="">
+         <h3>Firesbase AI Logic client SDKs</h3>
+         <p>
+            Build AI features by directly integrating the <br>
+            Gemini API into your client apps with our <br>
+            SDKs, available in your favoutite languages <br>
+            (Kotlin, Swift, JavaScriptn and Dart).
+        </p>
+         <button>Learn more</button>
+
+         <div id="new-alertBg">
+            <p>NEW!</p>
+         </div>
+    </div>
+    
+    <div id="genKit">
+        <img src="assets/buildIcons/Genkit.png" alt="">
+        <h3>Genkit</h3>
+        <p>
+            Build, test, deploy, and securely integrate AI <br>
+            features using an open source framework <br>
+            local developer tooling, and integrated cloud <br>
+            services.
+        </p>
+        <button>Learn more</button>
+
+        <!-- The NEW ALART TAG ON TOP -->
+        <div id="new-alertBg">
+            <p>NEW!</p>
+         </div>
+    </div>
+    
+    
+</div>
+
+ <div class="ML">
+        <div  id="machineLearning">
+            <img src="assets/buildIcons/Firebase ML.png" alt="">
+            <h3>
+                Machine Learning
+            </h3>
+            <p>
+                Add machine learning capabilities to your app <br>
+                and deploy custom models that run on- <br>
+                device.
+            </p>
+            <button>Learn more</button>
+
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+
+CSS
+
+.features-container{
+    width: 100%;
+    height: 900px;
+    /* background-color: burlywood; */
+    /* opacity: 50%; */
+}.features-container img{
+    width: 20% ;
+}
+.features{
+    width: 80%;
+    height: 50%;
+    /* background-color: orange; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+    left: 10%;
+    top: 70px;
+    
+}#text{
+    width: 27%;
+    height: 40%;
+    /* background-color: aqua; */
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+    position: relative;
+    bottom: 80px;
+
+}#text h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+
+    position: relative;
+    bottom: 7%;
+}#text p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+
+    
+}#firbaseAI{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+    
+
+
+
+}#firbaseAI img{
+
+}
+#firbaseAI h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#firbaseAI p{
+    color:  #adadad;
+    position: relative;
+    left: 5%;
+    top: 2%;
+
+}#firbaseAI button{
+    position: relative;
+    left: 5%;
+    top: 15%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px #ffa500;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;   
+}#firbaseAI button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+    /* The New Alert on each section */
+#new-alertBg{
+    width: 80px;
+    height: 45px;
+    background-color: rgb(12, 123, 249);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 70%;
+    top: -93%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}#new-alertBg p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px; 
+    color: #fff;
+    position: relative;
+    top: 1.5%;
+    left: -1%;
+}
+ 
+
+#genKit{
+    width: 29%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+    display: flex;
+/* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    right: 4%;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+    
+
+
+
+}#genKit img{
+
+}
+#genKit h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 5%;
+}#genKit p{
+    color:  #797979;
+    position: relative;
+    left: 5%;
+    top: 2%;
+
+}#genKit button{
+    position: relative;
+    left: 5%;
+    top: 15%;
+
+    width: 30%;
+    height: 10%;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}#genKit button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+}   
+    /* The New Alert on each section */
+#new-alertBg{
+    width: 80px;
+    height: 45px;
+    background-color: rgb(12, 123, 249);
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    left: 70%;
+    top: -93%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}#new-alertBg p{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px; 
+    color: #fff;
+    position: relative;
+    top: 1.5%;
+    left: -1%;
+}
+
+.ML{
+    width: 23.2%;
+    height: 320px;
+    background-color: white;
+    border: 2px solid #d1d1d1;
+    border-radius: 9%;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+    position: relative;
+    right: -37.5%;
+    top: 120px;
+
+    cursor: pointer;
+
+        /* For the shadow behind */
+    box-shadow: 0 4px 23px rgba(0, 0, 0, 0.2); /* Horizontal, Vertical, Blur, Color */
+    border-radius: 42px; /* Optional: gives rounded corners */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: smooth transition on hover */
+
+
+
+}#machineLearning img{
+   
+}
+#machineLearning h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    position: relative;
+    left: 6%;
+    bottom: 40px;
+}#machineLearning p{
+    color:  #797979;
+    position: relative;
+    left: 6%;
+    top: 30%;
+
+}#machineLearning button{
+    position: relative;
+    left: 6%;
+    top: 60px;
+
+    width: 40%;
+    height: 35px;
+    border: solid 2px orange;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    
+} #machineLearning button:hover{
+    background-color: orange;
+    transition:ease-in-out;
+    color: white;
+} 
+

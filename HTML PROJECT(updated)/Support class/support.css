@@ -1,0 +1,382 @@
+/*
+ * Your entire CSS file has been consolidated and cleaned up.
+ * Removed duplicate body and container rules.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e; /* Keep the dark background as requested */
+    color: #fff; /* Set a default light text color for the dark background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 50px;
+}
+
+/* --- Header Section (Dark) --- */
+.header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.image-content img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* --- Main Content Box (White) --- */
+.content-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Set a dark text color for everything inside this box */
+}
+
+/* --- Firebase Status Section --- */
+.status-card {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.status-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.status-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-icon {
+    font-size: 1.5rem;
+    color: #4285F4;
+}
+
+.status-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.view-status-btn {
+    background-color: transparent;
+    color: #4285F4;
+    border: 1px solid #4285F4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-status-btn:hover {
+    background-color: #4285F4;
+    color: #fff;
+}
+
+.status-detail {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+}
+
+/* --- Pick a Category Section --- */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.arrow-icon, .external-link-icon {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* --- Ask the Firebase community Section --- */
+.community-section {
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.community-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.community-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.community-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.community-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.community-link {
+    color: #4285F4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    /* Removed margin-top and display block for inline flow */
+    transition: text-decoration 0.3s;
+}
+
+.community-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Can't find your issue section --- */
+.not-found-section {
+    padding-top: 30px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.not-found-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.submit-support-link {
+    color: #4285F4;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: text-decoration 0.3s;
+}
+
+.submit-support-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Try Firebase Today Section --- */
+.try-firebase-section {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 70px 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.firebase-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.try-firebase-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.try-firebase-section p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    opacity: 0.8;
+}
+
+.get-started-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #eee;
+}
+
+
+/* --- All Firebase Products Section --- */
+.all-products-section {
+    background-color: #fff;
+    padding: 40px 30px; /* Added padding to match other sections */
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.all-products-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
+    gap: 30px;
+}
+
+.product-column h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-column a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.product-column a:hover {
+    color: #4285F4;
+    text-decoration: underline;
+}
+
+/* === RESOURCE LINKS SECTION === */
+
+.resources {
+  padding: 80px 40px;
+  background: #f1f3f4;
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.res-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(60,64,67,0.1);
+}
+.res-card h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+.res-card ul {
+  list-style: none;
+  padding: 0;
+}
+.res-card li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #5f6368;
+}
+
+/* === FOOTER SECTION (FIXED CENTERING) === */
+
+.footer-links {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #5f6368;
+  background-color: #fff;
+}
+.footer-links a {
+  color: #5f6368;
+  margin: 0 5px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
