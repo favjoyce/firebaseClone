@@ -11,7 +11,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 
 }
+.Easy-to-integrate-text{
+margin: 70px 0 70px 0 !important;
+}
+.trusted{
+    margin: 70px 0 70px 0 !important;
 
+}
 .getStart{
     color: black;
     text-decoration: none;
@@ -1002,6 +1008,8 @@ visibility: hidden;
     margin-top: 120px;
     line-height: 110px;
     font-weight: 500;
+    max-width: 90%;
+    max-height: 25% !important;
 }
 .vid{
     width: 205px;
@@ -2258,10 +2266,10 @@ color: black;
 .lmd{
     margin-top: 80px;
 }
-.make-app{
+/* .make-app{
     width:90%;
     height:90%;
-}
+} */
 .lmg{
     
 }
@@ -2290,7 +2298,7 @@ color: black;
 .intro-test h1{
     color: black;
 }
-@media screen and (max-width:415px){
+@media screen and (max-width:850px){
      .drop-down {
         display: none ;
      }
@@ -2616,6 +2624,13 @@ color: black;
    .Intro-hyvbrid-div{
     flex-direction: column;
     gap: 20px;
+   }
+   .trusted{
+    margin: 0 !important;
+   }
+   .Easy-to-integrate-text{
+        margin: 0 !important;
+
    }
    .trusted-inn h2{
    font-size: 19px;
@@ -3076,12 +3091,12 @@ body.light-theme .Generative-AI{
 .Try-firebase{
     margin-top: 50px;
 }
-.trusted{
+/* .trusted{
     margin-top: 30px;
 }
 .Easy-to-integrate-text{
     margin-top: 30px;
-}
+} */
 
 .carousel {
   display: none;
