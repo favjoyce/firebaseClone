@@ -1,0 +1,24 @@
+first fideo right
+
+        <video autoplay="true" class="" loop="true" muted="true" playsinline="true" preload="">
+          <source src="/static/images/products/app-hosting/Github_End_to_End.webm" type="video/webm">
+          <track kind="captions" src="/static/images/captions.vtt">
+         </video>
+
+
+
+
+         secont left video
+
+         <video autoplay="true" class="content__video--light" loop="true" muted="true" playsinline="true" preload="">
+          <source src="/static/images/products/app-hosting/Google_Cloud_Logo_LightMode.webm" type="video/webm">
+          <track kind="captions" src="/static/images/captions.vtt">
+         </video>
+
+
+
+Last Right
+         <video autoplay="true" class="" loop="true" muted="true" playsinline="true" preload="">
+          <source src="/static/images/products/app-hosting/Firebase_AppHosting_AITemplates.webm" type="video/webm">
+          <track kind="captions" src="/static/images/captions.vtt">
+         </video>

@@ -1,0 +1,18 @@
+ <section class="whiteWrap">
+        <div class="wrapper">
+            <!-- <div class="w-left"></div>
+            <div class="w-right"></div> -->
+            <div class="whiteWrap-content">
+                
+                <h3>Improve app stability <br>
+                    and performance
+                </h3>
+                <p>Firebase helps you track, priotize and <br>
+                    resolve issues that degrade your user <br>
+                    experience
+                </p>
+
+                
+            </div>
+        </div>
+    </section>
