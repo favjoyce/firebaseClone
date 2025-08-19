@@ -2939,7 +2939,7 @@ body.light-theme .Generative-AI{
 }
 @media screen and (max-width:835px){
     .drop-down{
-        display: none;
+        display: none !important;
     }
     .blogp2{
         display:none
