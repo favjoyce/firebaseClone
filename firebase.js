@@ -522,3 +522,130 @@ dots.forEach(dot => {
 
 // Initial display
 showSlide(0);
+
+
+
+
+  // configuration: submenu content for each key
+  const PANEL_CONTENT = {
+    build: {
+      title: 'Build',
+      items: [
+        { label: 'Go to build', href: './Build and run pages/build/build.html' },
+
+        { label: 'App Test', href: '#' },
+        { label: 'App Hosting', href: './firebaseHosting.html' },
+        { label: 'Authentication', href: './firebaseauth.html' },
+        { label: 'Cloud Functions', href: './cloud.html' },
+        { label: 'Firestore', href: '#' }
+      ]
+    },
+    run: {
+      title: 'Run',
+      items: [
+        { label: 'Go to Run', href: './Build and run pages/run/run.html' },
+
+        { label: 'A/B Testing', href: '#' },
+        { label: 'App Distribution', href: './appDistribute.html' },
+        { label: 'Crashlytics', href: './crashlytics.html' },
+        { label: 'Performance Monitoring', href: '#' }
+      ]
+    },
+    docs: {
+      title: 'Docs',
+      items: [
+      { label: 'Build', href: './Build and run pages/build/build.html' },
+
+       { label: ' Run', href: './Build and run pages/run/run.html' },
+
+        { label: 'Overview', href: '#' },
+        { label: 'Fundamentals', href: '#' },
+        {label: 'Crashlytics', href: './crashlytics.html' },
+        { label: 'Performance Monitoring', href: '#' }
+      ]
+    },
+    community: {
+      title: 'Community',
+      items: [
+        { label: 'Forums', href: '#' },
+        { label: 'Events', href: '#' }
+      ]
+    }
+  };
+
+  // elements
+  const mobileHamburger = document.getElementById('mobileHamburger');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+  const drawerClose = document.getElementById('drawerClose');
+  const drawerInner = document.querySelector('.drawer-inner');
+  const subPanel = document.getElementById('subPanel');
+  const subTitle = subPanel.querySelector('.sub-title');
+  const subList = subPanel.querySelector('.sub-list');
+  const subBack = document.getElementById('subBack');
+  const hasPanels = document.querySelectorAll('.has-panel');
+
+  function openDrawer() {
+    mobileDrawer.classList.add('open');
+    drawerBackdrop.hidden = false;
+    setTimeout(()=> drawerBackdrop.classList.add('visible'), 5);
+    document.body.style.overflow = 'hidden';
+    mobileDrawer.setAttribute('aria-hidden','false');
+  }
+
+  function closeDrawer() {
+    drawerInner.classList.remove('show-sub'); // ensure sub closes
+    mobileDrawer.classList.remove('open');
+    drawerBackdrop.classList.remove('visible');
+    setTimeout(()=> drawerBackdrop.hidden = true, 250);
+    document.body.style.overflow = '';
+    mobileDrawer.setAttribute('aria-hidden','true');
+  }
+
+  // populate and show subpanel
+  function openSubPanel(key) {
+    const data = PANEL_CONTENT[key];
+    if (!data) return;
+    // set title
+    subTitle.textContent = data.title;
+    // clear list
+    subList.innerHTML = '';
+    data.items.forEach(it=>{
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = it.href || '#';
+      a.textContent = it.label;
+      li.appendChild(a);
+      subList.appendChild(li);
+    });
+    // push drawer-inner left to show subpanel
+    drawerInner.classList.add('show-sub');
+  }
+
+  // go back to main panel
+  function closeSubPanel() {
+    drawerInner.classList.remove('show-sub');
+  }
+
+  // events
+  mobileHamburger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+
+  hasPanels.forEach(el=>{
+    el.addEventListener('click', (e)=>{
+      const key = el.dataset.key;
+      if (!key) return;
+      openSubPanel(key);
+    });
+  });
+
+  subBack.addEventListener('click', closeSubPanel);
+
+  // optional: close menu with Escape
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'Escape') {
+      if (drawerInner.classList.contains('show-sub')) closeSubPanel();
+      else closeDrawer();
+    }
+  });

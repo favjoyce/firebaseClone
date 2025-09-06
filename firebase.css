@@ -3200,3 +3200,165 @@ body.light-theme .Generative-AI{
     height:90%;
 
 }
+
+
+:root{
+  --drawer-width: 86vw; /* similar to Firebase mobile width */
+  --drawer-bg: #fff;
+  --divider: #eee;
+  --muted: #6b6b6b;
+  --accent: #222;
+}
+
+/* show hamburger only on small screens; put in your header where needed */
+.mobile-header {
+  display: none;              /* visible via media query below */
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: transparent;
+}
+.mobile-header .logo img { height: 28px; }
+
+/* hamburger icon */
+.mobile-hamburger {
+  width: 36px;
+  height: 28px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.mobile-hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* backdrop */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+/* drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--drawer-width);
+  max-width: 420px;
+  transform: translateX(-110%);
+  z-index: 1000;
+  transition: transform .32s cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+  box-shadow: 8px 0 30px rgba(0,0,0,0.12);
+  background: var(--drawer-bg);
+  overflow: hidden;
+}
+
+/* inner wrapper: two panels side-by-side (main + sub) */
+.drawer-inner {
+  width: 200%;              /* holds two 100% panels */
+  display: flex;
+  height: 100%;
+  transition: transform .28s ease;
+}
+
+/* each child takes 50% of .drawer-inner (so each equals 100% visible drawer) */
+.panel {
+  width: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* top row */
+.drawer-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.drawer-logo { height: 26px; }
+.drawer-close {
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* list styles */
+.drawer-list, .sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.drawer-list .drawer-item {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.item-left { display: flex; flex-direction: column; }
+.item-title { font-weight: 600; color: #222; font-size: 16px; }
+.item-sub { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+/* chevron */
+.item-right { font-size: 22px; color: var(--muted); }
+
+/* sub panel header */
+.sub-top {
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.sub-back {
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sub-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* sub list items */
+.sub-list li {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.sub-list a {
+  text-decoration: none;
+  color: #444;
+  display:block;
+  font-size: 15px;
+}
+
+/* OPEN states (set by JS) */
+.mobile-drawer.open { transform: translateX(0); }
+.drawer-backdrop.visible { opacity: 1; }
+
+/* when showing sub-panel: translate drawer-inner left by 50% (reveals second panel) */
+.drawer-inner.show-sub { transform: translateX(-50%); }
+
+/* responsive: show only on small screens */
+@media (max-width: 900px) {
+  .mobile-header { display:flex; }
+}

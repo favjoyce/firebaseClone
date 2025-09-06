@@ -15,6 +15,113 @@
     <section>
     <div class="header">
         <div class="header-wrap">
+
+          <!-- === Mobile header (logo + hamburger) === -->
+<div class="mobile-header">
+  
+
+  <button id="mobileHamburger" class="mobile-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- === Backdrop (dark area when drawer open) === -->
+<div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+
+<!-- === Mobile drawer (slides in from left) === -->
+<nav id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <!-- MAIN PANEL -->
+    <div class="panel main-panel">
+      <div class="drawer-top">
+        <button id="drawerClose" class="drawer-close" aria-label="Close menu">✕</button>
+        <img src="./pictures/lockup.svg" class="drawer-logo" alt="Firebase">
+        <!-- optionally: user avatar / more buttons -->
+      </div>
+
+      <ul class="drawer-list">
+        <!-- Items with sub-panels have data-key attribute -->
+        <li class="drawer-item has-panel" data-key="build">
+          <div class="item-left">
+            <div class="item-title">Build</div>
+            <div class="item-sub">More</div>
+          </div>
+          <div class="item-right">›</div>
+        </li>
+
+        <li class="drawer-item has-panel" data-key="run">
+          <div class="item-left">
+            <div class="item-title">Run</div>
+            <div class="item-sub">More</div>
+          </div>
+          <div class="item-right">›</div>
+        </li>
+
+        <li class="drawer-item">
+          <div class="item-left">
+            <div class="item-title">Solutions</div>
+          </div>
+          <div class="item-right"></div>
+        </li>
+
+        <li class="drawer-item">
+          <div class="item-left">
+            <div class="item-title">Pricing</div>
+          </div>
+          <div class="item-right"> </div>
+        </li>
+
+        <li class="drawer-item has-panel" data-key="docs">
+          <div class="item-left">
+            <div class="item-title">Docs</div>
+            <div class="item-sub">More</div>
+          </div>
+          <div class="item-right">›</div>
+        </li>
+
+        <li class="drawer-item has-panel" data-key="community">
+          <div class="item-left">
+            <div class="item-title">Community</div>
+            <div class="item-sub">More</div>
+          </div>
+          <div class="item-right">›</div>
+        </li>
+
+        <li class="drawer-item">
+          <div class="item-left">
+            <div class="item-title">Support</div>
+          </div>
+          <div class="item-right">›</div>
+        </li>
+
+        <li class="drawer-item">
+          <div class="item-left">
+            <div class="item-title">Blog</div>
+          </div>
+          <div class="item-right"> </div>
+        </li>
+
+        <li class="drawer-item">
+          <div class="item-left">
+            <div class="item-title">Studio</div>
+          </div>
+          <div class="item-right"> </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SUB PANEL (reused for any section with children) -->
+    <div class="panel sub-panel" id="subPanel">
+      <div class="sub-top">
+        <button id="subBack" class="sub-back" aria-label="Back">←</button>
+        <div class="sub-title">Title</div>
+      </div>
+      <ul class="sub-list"></ul>
+    </div>
+  </div>
+</nav>
+
+
            <div class="firebase-pics">
             <a href="./index.html"><img src="./pictures/lockup.svg" alt="" ></a>
            </div>
